@@ -1,33 +1,93 @@
-<?php
-require 'connexionBDD.php';
-/*
-var_dump($conn);
-$resultat = $conn->query('SELECT * from user');
-foreach($resultat as $row) {
-   
-}*/
-?>
-
-<!DOCTYPE html>
 <html>
-    <head>
-        <script src="lib/html2canvas.min.js"></script>
-        <script src="lib/screenshot.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <div class="container">
-        <div class="row">
-            <div class="col-8 offset-2">
-                    <!-- Btn to trigger action -->
-                    <a href="#" class="btn btn-block btn-primary mb-3" id="btnDownload" onclick="btnClick()">Download</a>
+<head>
+    <title></title>
+    <link rel="stylesheet" href=
+"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src=
+"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+    <style>
+        .top {
+            margin-top: 20px;
+        }
+        
+        h1 {
+            color: green;
+        }
+        
+        input {
+            background-color: transparent;
+            border: 0px solid;
+            width: 300;
+        }
+        
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
 
-            <!-- Content to capture -->
-            <div id="capture" class="text-center bg-info align-middle">
-                <textarea maxlength="110">Click to edit...</textarea>
-            </div>
-            </div>
+<body>
+
+    <div class="col-md-offset-4 col-md-4 col--md-offset-4 top">
+        
+        <?php
+        for($i=1;$i<=6;$i++)
+{?>
+        
+        <div id="createImg" style="border:1px solid;">
+            <h1>convert image</h1>
+            <h4>save an HTML5 Canvas as an
+                        image on a server <?php echo $i ?></h4>
+            <input type="text" value=""
+    placeholder="Enter wahtaever you want <?php echo $i ?>" class="form-control" />
+            <br/>
+        </div>
+        
+        <?php } ?>
+        
+        
+        <button id="imgclicks" type="button"
+                                    class="btn btn-primary top">
+            Create Image</button>
+        <div id="img" style="display:none;">
+            <img src="" id="newimg" class="top" />
         </div>
     </div>
+    <script>
+        $(function() {
+            $("#imgclicks").click(function() {
+                
+               
+
+
+                html2canvas($("#createImg"), {
+                    onrendered: function(canvas) {
+                        var imgsrc = canvas.toDataURL("image/png");
+                        console.log(imgsrc);
+                        $("#newimg").attr('src', imgsrc);
+                        $("#img").show();
+                        var dataURL = canvas.toDataURL();
+                        $.ajax({
+                            type: "POST",
+                            url: "save_image.php",
+                            data: {
+                                imgBase64: dataURL
+                            }
+                        }).done(function(o) {
+                            console.log('saved');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 
 </html>
