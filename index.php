@@ -1,3 +1,10 @@
+<?php
+require 'connexionBDD.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+?>
 <html>
 <head>
     <title></title>
@@ -37,41 +44,28 @@
 
     <div class="col-md-offset-4 col-md-4 col--md-offset-4 top">
         
-        <?php
-        for($i=1;$i<=6;$i++)
-{?>
-        
+       
         <div id="createImg" style="border:1px solid;">
             <h1>convert image</h1>
             <h4>save an HTML5 Canvas as an
-                        image on a server <?php echo $i ?></h4>
+                        image on a server</h4>
             <input type="text" value=""
-    placeholder="Enter wahtaever you want <?php echo $i ?>" class="form-control" />
+    placeholder="Enter wahtaever you want " class="form-control" />
             <br/>
         </div>
         
-        <?php } ?>
         
         
         <button id="imgclicks" type="button"
                                     class="btn btn-primary top">
             Create Image</button>
-        <div id="img" style="display:none;">
-            <img src="" id="newimg" class="top" />
-        </div>
+        
     </div>
     <script>
         $(function() {
             $("#imgclicks").click(function() {
-                
-               
-
-
                 html2canvas($("#createImg"), {
                     onrendered: function(canvas) {
-                        var imgsrc = canvas.toDataURL("image/png");
-                        console.log(imgsrc);
-                        $("#newimg").attr('src', imgsrc);
                         $("#img").show();
                         var dataURL = canvas.toDataURL();
                         $.ajax({
@@ -82,6 +76,11 @@
                             }
                         }).done(function(o) {
                             console.log('saved');
+                            <?php
+                                $sql = "INSERT INTO post (idOwner, description, image) VALUES (?,?,?)";
+                                $stmt= $conn->prepare($sql);
+                                $stmt->execute([1, 'bla bla bla', 'test.png']);
+                            ?>
                         });
                     }
                 });
