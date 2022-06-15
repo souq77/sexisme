@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+    
+    function reveal(type){
+        console.log(type);
+    }
+});
 /*$("#imgclicks").click(function() {
     html2canvas($("#post"), {
         onrendered: function(canvas) {

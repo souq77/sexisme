@@ -1,17 +1,69 @@
 * {
-    margin: 0 25%;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    margin: 0 25%;
-    background-color: purple;
+body {
+    margin: 0 37% !important;
+    background-color: #e5e5e5 !important;
 }
-#post {
 
-    background: grey;
-    height: 50px;
+.post_principal, .post_menu, .post_img, .post_outils {
     width: 100%;
-    
+}
+
+.post_principal {
+    background: blue;
+}
+
+.post_menu {
+    background-color: #f4f4f4;
+    height: 6vh;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post_img {
+    background-color: #fff;
+    height: 78vh;
+    padding: 5% 2% !important;
+}
+
+.img_post_img {
+    height: 100%;
+    background-image: url('images/fond/fond-par-defaut.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+}
+
+.post_outils {
+    background-color: #f4f4f4;
+    height: 16vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post_outils > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_outils img:hover {
+    cursor: pointer;
+}
+
+.post_outils img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.post_outils figcaption {
+    text-align: center;
+    font-size: 1.4rem;
 }
