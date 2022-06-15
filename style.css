@@ -1,0 +1,17 @@
+* {
+    margin: 0 25%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 25%;
+    background-color: purple;
+}
+#post {
+
+    background: grey;
+    height: 50px;
+    width: 100%;
+    
+}
