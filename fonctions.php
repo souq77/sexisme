@@ -1,3 +1,4 @@
+<script>
 document.addEventListener("DOMContentLoaded", function () {
     
     function reveal(type){
@@ -26,3 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });*/
+</script>
