@@ -115,24 +115,42 @@
         </div>
 
         <div class="tools" id="post_sous_outils_bulles">
-            <div onclick="">
+            <div onclick="bulles('popup_titre')">
                 <figure>
                     <img src="images/icones/icone-test.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
-            <div onclick="">
+            <div onclick="bulles('popup_agresseur')">
                 <figure>
                     <img src="images/icones/icone-test.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
-            <div onclick="">
+            <div onclick="bulles('popup_victime')">
                 <figure>
                     <img src="images/icones/icone-test.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
+        </div>
+
+        <div class="fond_gris"></div>
+
+        <div class="popup_bulle" id="popup_titre">
+            <button>Fermer</button>
+            <textarea maxlength="50" minlength="5">Zone de texte</textarea>
+            <button>Valider</button>
+        </div>
+        <div class="popup_bulle" id="popup_agresseur">
+            <button>Fermer</button>
+            <textarea maxlength="50" minlength="5">Zone de texte</textarea>
+            <button>Valider</button>
+        </div>
+        <div class="popup_bulle" id="popup_victime">
+            <button>Fermer</button>
+            <textarea maxlength="50" minlength="5">Zone de texte</textarea>
+            <button>Valider</button>
         </div>
 
         <div class="post_outils">

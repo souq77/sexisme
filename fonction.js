@@ -90,6 +90,16 @@ function personnages(type) {
     }
 }
 
+function bulles(nom) {
+    let bulle = document.getElementById(nom);
+    let fondGris = document.getElementsByClassName("fond_gris");
+    //bulle.style.display = "block";
+    bulle.style.opacity = "1";
+    bulle.style.transition = "1s";
+    bulle.style.zIndex = "2";
+    fondGris[0].style.display = "block";
+}
+
 
 
 
