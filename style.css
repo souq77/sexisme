@@ -46,6 +46,20 @@ body {
     background-position: bottom;
 }
 
+.post_img_couche_3 {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#img_couche_3_titre {
+    width: 100%;
+}
+
+#img_couche_3_bulle_gauche, #img_couche_3_bulle_droite {
+    width: 50%;
+}
+
 @keyframes sous_outils {
     from {
         height: 0vh;

@@ -46,16 +46,16 @@ function scenario(type) {
             img.style.backgroundImage = "url('images/scenarios/rue.png')";       
         break;
         case "taff":  
-            img.style.backgroundImage = "url('images/scenarios/balloon.png')";      
+            img.style.backgroundImage = "url('images/scenarios/jerry.png')";      
         break;
         case "residence":  
-            img.style.backgroundImage = "url('images/scenarios/balloon.png')";      
+            img.style.backgroundImage = "url('images/scenarios/jerry.png')";      
         break;
         case "activite": 
-            img.style.backgroundImage = "url('images/scenarios/balloon.png')";       
+            img.style.backgroundImage = "url('images/scenarios/jerry.png')";       
         break;
         case "ami":
-            img.style.backgroundImage = "url('images/scenarios/balloon.png')";        
+            img.style.backgroundImage = "url('images/scenarios/jerry.png')";        
         break;
     }
 }
@@ -64,30 +64,63 @@ function personnages(type) {
     let img = document.getElementById("img_couche_2");
     switch (type) {
         case "1":
-            img.style.backgroundImage = "url('images/personnages/balloon.png')"; 
+            img.style.backgroundImage = "url('images/personnages/jerry.png')"; 
         break;
         case "2":
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";       
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";       
         break;
         case "3":  
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";      
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";      
         break;
         case "4":  
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";      
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";      
         break;
         case "5": 
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";       
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";       
         break;
         case "6":
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";        
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";        
         break;
         case "7":
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";        
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";        
         break;
         case "8":
-            img.style.backgroundImage = "url('images/personnages/balloon.png')";        
+            img.style.backgroundImage = "url('images/personnages/jerry.png')";        
         break;
     }
+}
+
+function submitBulle(nom, dialogue){
+    let dialogues = document.getElementById(dialogue).value;
+    let img;
+    let newP;
+    switch (nom) {
+        case "img_couche_3_titre":
+            img = document.getElementById('img_couche_3_titre');
+            newP = document.getElementById("p_couche_3_titre");
+            img.style.backgroundImage = "url('images/bulles/bulleViergeTitre.png')";
+            img.style.backgroundRepeat = "no-repeat";
+            img.style.backgroundPosition = "center top";
+            img.style.height = "20vh";
+            newP.innerText = dialogues;
+            closeBulle("popup_titre");
+        break;
+        case "img_couche_3_agresseur":
+            img = document.getElementById('img_couche_3_bulle_gauche');
+            newP = document.getElementById("p_couche_3_gauche");
+            img.style.backgroundImage = "url('images/bulles/bulleViergeGauche.png')";
+            newP.innerText = dialogues;
+            closeBulle("popup_agresseur");
+        break;
+        case "img_couche_3_victime":  
+            img = document.getElementById('img_couche_3_bulle_droite');
+            newP = document.getElementById("p_couche_3_droite");
+            img.style.backgroundImage = "url('images/bulles/bulleViergeDroite.png')";
+            newP.innerText = dialogues;
+            closeBulle("popup_victime");
+        break;
+
+}
 }
 
 function bulles(nom) {
@@ -100,7 +133,15 @@ function bulles(nom) {
     fondGris[0].style.display = "block";
 }
 
-
+function closeBulle(nom){
+    let bulle = document.getElementById(nom);
+    let fondGris = document.getElementsByClassName("fond_gris");
+    //bulle.style.display = "block";
+    bulle.style.opacity = "0";
+    bulle.style.transition = "1s";
+    bulle.style.zIndex = "-1";
+    fondGris[0].style.display = "none";
+}
 
 
 /*$("#imgclicks").click(function() {
