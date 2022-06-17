@@ -24,6 +24,26 @@ body {
     align-items: center;
 }
 
+#publierPost {
+    margin-right: 2%;
+    color: #fff;
+    background: #202945;
+    border-radius: 12px;
+    height: 4vh;
+    padding: 0 20px;
+    font-size: 4rem;
+}
+
+#creerPost {
+    font-size: 4rem;
+    transform: translateY(1rem);
+}
+
+#fermerPost {
+    margin-left: 2%;
+    height: 2.5vh;
+}
+
 .post_img {
     background-color: #fff;
     height: 78vh;
@@ -74,7 +94,7 @@ body {
     background-color: #747474;
     height: 16vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: left;
     align-items: center;
     position: absolute;
     bottom: 0vh;
@@ -85,27 +105,25 @@ body {
     display: grid;
     grid-gap: 16px;
     padding: 16px;
-    /*grid-template-columns: repeat(auto-fill,minmax(22.5%,1fr));*/
+    /*grid-template-columns: repeat(auto-fill,minmax(27.5%,1fr));*/
     grid-auto-flow: column;
-    grid-auto-columns: minmax(22.5%,1fr);
+    grid-auto-columns: minmax(27.5%,1fr);
     overflow-x: auto;
     font-size: 1.4rem;
-
-    background: pink;
+    background: #fff;
 }
 
 #post_sous_outils_personnages {
     display: grid;
     grid-gap: 16px;
     padding: 16px;
-    /*grid-template-columns: repeat(auto-fill,minmax(22.5%,1fr));*/
+    /*grid-template-columns: repeat(auto-fill,minmax(27.5%,1fr));*/
     grid-auto-flow: column;
-    grid-auto-columns: minmax(22.5%,1fr);
+    grid-auto-columns: minmax(27.5%,1fr);
     overflow-x: auto;
     text-align: center;
     font-size: 1.4rem;
-
-    background: pink;
+    background: #fff;
 }
 
 #post_sous_outils_bulles {
@@ -119,13 +137,15 @@ body {
 }
 
 .post_outils {
-    background-color: #f4f4f4;
+    background-color: #fff;
     height: 16vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
     bottom: 0;
+    /*border-top: 4px solid #e5e5e5;*/
+    box-shadow: 0 -4px 8px #e5e5e5;
 }
 
 .post_outils > div {
@@ -135,17 +155,31 @@ body {
     align-items: center;
 }
 
-.post_outils figcaption, #post_sous_outils_scenario figcaption {
+.post_outils figcaption, #post_sous_outils_scenario figcaption, #post_sous_outils_personnages figcaption {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 4rem;
+    padding-top: 2rem;
+    color: #202945;
 }
 
-.post_outils img, #post_sous_outils_scenario img {
+.post_outils img, #post_sous_outils_scenario img, #post_sous_outils_personnages img {
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
-.post_outils img:hover, #post_sous_outils_scenario, #post_sous_outils_personnages, #post_sous_outils_bulles, img:hover {
+.post_outils img {
+    height: 6vh;
+}
+
+#post_sous_outils_scenario img {
+    height: 10vh;
+}
+
+#post_sous_outils_personnages img {
+    height: 10vh;
+}
+
+.post_outils img:hover, #post_sous_outils_scenario, #post_sous_outils_personnages, #post_sous_outils_bulles {
     cursor: pointer;
 }
 

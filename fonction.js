@@ -143,6 +143,44 @@ function closeBulle(nom){
     fondGris[0].style.display = "none";
 }
 
+function selectOutil(nom) {
+    let leftTool = document.getElementById("outil_gauche");
+    let middleTool = document.getElementById("outil_milieu");
+    let rightTool = document.getElementById("outil_droit");
+
+    leftTool.style.opacity = ".5";
+    middleTool.style.opacity = ".5";
+    rightTool.style.opacity = ".5";
+
+    switch (nom) {
+        case "outil_gauche":
+            outil_gauche.style.opacity = "1";
+        break;
+        case "outil_milieu":
+            outil_milieu.style.opacity = "1"; 
+        break;
+        case "outil_droit":  
+            outil_droit.style.opacity = "1"; 
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*$("#imgclicks").click(function() {
 html2canvas($("#post"), {

@@ -1,8 +1,9 @@
 <body>
     <div class="post_principal">
         <div class="post_menu">
-            <p>Fermer</p>
-            <button>Publier</button>
+            <img id="fermerPost" src="images/icones/croix.png" />
+            <p id="creerPost">Créer un poste</p>
+            <button id="publierPost">Publier</button>
         </div>
         <div id="post_img" class="post_img">
             <div id="img_couche_1" class="post_img_couche_1">
@@ -23,102 +24,90 @@
         </div>
 
         <div class="tools" id="post_sous_outils_scenario">
-            <div onclick="">
-                <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
-                </figure>
-            </div>
             <div onclick="scenario('soiree')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario1</figcaption>
+                    <img src="images/scenarios/soiree.png" alt="">
+                    <figcaption>En soirée</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('rue')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
+                    <img src="images/scenarios/rue.png" alt="">
+                    <figcaption>Dans la rue</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('taff')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
+                    <img src="images/scenarios/rue.png" alt="">
+                    <figcaption>Au travail</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('residence')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
+                    <img src="images/scenarios/rue.png" alt="">
+                    <figcaption>À la maison</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('activite')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
+                    <img src="images/scenarios/rue.png" alt="">
+                    <figcaption>En activités</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('ami')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario6</figcaption>
+                    <img src="images/scenarios/rue.png" alt="">
+                    <figcaption>Autre lieu</figcaption>
                 </figure>
             </div>
         </div>
 
         <div class="tools" id="post_sous_outils_personnages">
-            <div onclick="">
-                <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
-                </figure>
-            </div>
             <div onclick="personnages('1')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/sifflement.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('2')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/regard.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('3')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/menace.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('4')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/agression.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('5')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/exhibition.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('6')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/viol.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('7')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/pornographie.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
             <div onclick="personnages('8')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
+                    <img src="images/personnages/remarque.png" alt="">
                     <figcaption>Scenario</figcaption>
                 </figure>
             </div>
@@ -164,22 +153,22 @@
         </div>
 
         <div class="post_outils">
-            <div id="popup" onclick="reveal('Scenario')">
+            <div id="outil_gauche" onclick="reveal('Scenario'), selectOutil('outil_gauche')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Scenario</figcaption>
+                    <img src="images/icones/scenario.png" alt="">
+                    <figcaption>Scénario</figcaption>
                 </figure>
             </div>
-            <div onclick="reveal('Personnage')">
+            <div id="outil_milieu" onclick="reveal('Personnage'), selectOutil('outil_milieu')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Personnage</figcaption>
+                    <img src="images/icones/situation.png" alt="">
+                    <figcaption>Situation</figcaption>
                 </figure>
             </div>
-            <div onclick="reveal('Bulle')">
+            <div id="outil_droit" onclick="reveal('Bulle'), selectOutil('outil_droit')">
                 <figure>
-                    <img src="images/icones/icone-test.png" alt="">
-                    <figcaption>Bulle</figcaption>
+                    <img src="images/icones/texte.png" alt="">
+                    <figcaption>Texte</figcaption>
                 </figure>
             </div>
         </div>
