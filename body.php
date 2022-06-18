@@ -47,3 +47,4 @@
     </div>-->
 
 </body>
+<script type="text/javascript" src="fonction.js"></script>
