@@ -3,9 +3,13 @@
     box-sizing: border-box;
 }
 
-body {
-    /*margin: 0 37% !important;*/
-    /*background-color: #e5e5e5 !important;*/
+.bouton {
+    color: #fff;
+    background: #202945;
+    border-radius: 12px;
+    height: 4vh;
+    padding: 0 20px;
+    font-size: 4rem;
 }
 
 .post_principal, .post_menu, .post_img, .post_outils {
@@ -26,12 +30,6 @@ body {
 
 #publierPost {
     margin-right: 2%;
-    color: #fff;
-    background: #202945;
-    border-radius: 12px;
-    height: 4vh;
-    padding: 0 20px;
-    font-size: 4rem;
 }
 
 #creerPost {
@@ -91,7 +89,7 @@ body {
 }
 
 .tools {
-    background-color: #747474;
+    background-color: #fff;
     height: 16vh;
     display: flex;
     justify-content: left;
@@ -196,13 +194,64 @@ body {
 
 .popup_bulle {
     position: absolute;
-    background: #fff;
+    background: #ffe8b4;
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% - 8vh));
-    height: 50vh;
-    width: 50vw;
-    /*display: none;*/
+    height: 25.5vh;
+    width: 80vw;
+    border-radius: 20px;
     z-index: -1;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup_img {
+    display: flex;
+    justify-content: right;
+}
+
+.popup_bulle img {
+    text-align: right;
+    height: 2.5vh;
+    width: 2.5vh;
+    margin: 1vh 1vh 0 0;
+}
+
+.popup_texte {
+    display: flex;
+    justify-content: center;
+}
+
+.popup_bulle textarea  {
+    width: 100%;
+    height: 8vh;
+    margin: 4vh 1vh;
+    font-size: 4rem;
+    background: #ffe8b4;
+    border: none;
+}
+
+.popup_bouton {
+    display: flex;
+    justify-content: right;
+}
+
+.popup_bulle button  {
+    margin: 1vh 1vh 0 0;
+}
+
+.tools img {
+    height: 8vh;
+}
+
+.tools figcaption {
+    font-size: 4rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+#outil_gauche, #outil_milieu, #outil_droit {
+    opacity: .5;
 }

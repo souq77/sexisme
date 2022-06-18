@@ -109,6 +109,9 @@ function submitBulle(nom, dialogue){
             img = document.getElementById('img_couche_3_bulle_gauche');
             newP = document.getElementById("p_couche_3_gauche");
             img.style.backgroundImage = "url('images/bulles/bulleViergeGauche.png')";
+            img.style.backgroundRepeat = "no-repeat";
+            img.style.backgroundPosition = "left top";
+            img.style.height = "20vh";
             newP.innerText = dialogues;
             closeBulle("popup_agresseur");
         break;
@@ -116,6 +119,9 @@ function submitBulle(nom, dialogue){
             img = document.getElementById('img_couche_3_bulle_droite');
             newP = document.getElementById("p_couche_3_droite");
             img.style.backgroundImage = "url('images/bulles/bulleViergeDroite.png')";
+            img.style.backgroundRepeat = "no-repeat";
+            img.style.backgroundPosition = "right top";
+            img.style.height = "20vh";
             newP.innerText = dialogues;
             closeBulle("popup_victime");
         break;
@@ -148,21 +154,57 @@ function selectOutil(nom) {
     let middleTool = document.getElementById("outil_milieu");
     let rightTool = document.getElementById("outil_droit");
 
-    leftTool.style.opacity = ".5";
+    switch (nom) {
+        case "outil_gauche":
+            if (leftTool.style.opacity == "1") {
+                leftTool.style.opacity = ".5";
+                middleTool.style.opacity = ".5";
+                rightTool.style.opacity = ".5";            
+            } else {
+                leftTool.style.opacity = "1";
+                middleTool.style.opacity = ".5";
+                rightTool.style.opacity = ".5";            
+            }
+        break;
+        case "outil_milieu":
+            if (middleTool.style.opacity == "1") {
+                leftTool.style.opacity = ".5";
+                middleTool.style.opacity = ".5";
+                rightTool.style.opacity = ".5";            
+            } else {
+                leftTool.style.opacity = ".5";
+                middleTool.style.opacity = "1";
+                rightTool.style.opacity = ".5";            
+            }
+        break;
+        case "outil_droit":  
+        if (rightTool.style.opacity == "1") {
+            leftTool.style.opacity = ".5";
+            middleTool.style.opacity = "1";
+            rightTool.style.opacity = ".5";            
+        } else {
+            leftTool.style.opacity = ".5";
+            middleTool.style.opacity = ".5";
+            rightTool.style.opacity = "1";            
+        }
+        break;
+    }
+    
+    /*leftTool.style.opacity = ".5";
     middleTool.style.opacity = ".5";
     rightTool.style.opacity = ".5";
 
     switch (nom) {
         case "outil_gauche":
-            outil_gauche.style.opacity = "1";
+            leftTool.style.opacity = "1";
         break;
         case "outil_milieu":
-            outil_milieu.style.opacity = "1"; 
+            middleTool.style.opacity = "1"; 
         break;
         case "outil_droit":  
-            outil_droit.style.opacity = "1"; 
+        rightTool.style.opacity = "1"; 
         break;
-    }
+    }*/
 }
 
 
