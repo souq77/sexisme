@@ -169,21 +169,57 @@ function selectOutil(nom) {
     let middleTool = document.getElementById("outil_milieu");
     let rightTool = document.getElementById("outil_droit");
 
-    leftTool.style.opacity = ".5";
+    switch (nom) {
+        case "outil_gauche":
+            if (leftTool.style.opacity == "1") {
+                leftTool.style.opacity = ".5";
+                middleTool.style.opacity = ".5";
+                rightTool.style.opacity = ".5";            
+            } else {
+                leftTool.style.opacity = "1";
+                middleTool.style.opacity = ".5";
+                rightTool.style.opacity = ".5";            
+            }
+        break;
+        case "outil_milieu":
+            if (middleTool.style.opacity == "1") {
+                leftTool.style.opacity = ".5";
+                middleTool.style.opacity = ".5";
+                rightTool.style.opacity = ".5";            
+            } else {
+                leftTool.style.opacity = ".5";
+                middleTool.style.opacity = "1";
+                rightTool.style.opacity = ".5";            
+            }
+        break;
+        case "outil_droit":  
+        if (rightTool.style.opacity == "1") {
+            leftTool.style.opacity = ".5";
+            middleTool.style.opacity = "1";
+            rightTool.style.opacity = ".5";            
+        } else {
+            leftTool.style.opacity = ".5";
+            middleTool.style.opacity = ".5";
+            rightTool.style.opacity = "1";            
+        }
+        break;
+    }
+    
+    /*leftTool.style.opacity = ".5";
     middleTool.style.opacity = ".5";
     rightTool.style.opacity = ".5";
 
     switch (nom) {
         case "outil_gauche":
-            outil_gauche.style.opacity = "1";
+            leftTool.style.opacity = "1";
         break;
         case "outil_milieu":
-            outil_milieu.style.opacity = "1"; 
+            middleTool.style.opacity = "1"; 
         break;
         case "outil_droit":  
-            outil_droit.style.opacity = "1"; 
+        rightTool.style.opacity = "1"; 
         break;
-    }
+    }*/
 }
 
 
