@@ -99,9 +99,6 @@ function submitBulle(nom, dialogue){
             img = document.getElementById('img_couche_3_titre');
             newP = document.getElementById("p_couche_3_titre");
             img.style.backgroundImage = "url('images/bulles/bulleViergeTitre.png')";
-            img.style.backgroundRepeat = "no-repeat";
-            img.style.backgroundPosition = "center top";
-            img.style.height = "20vh";
             newP.innerText = dialogues;
             closeBulle("popup_titre");
         break;
@@ -109,9 +106,6 @@ function submitBulle(nom, dialogue){
             img = document.getElementById('img_couche_3_bulle_gauche');
             newP = document.getElementById("p_couche_3_gauche");
             img.style.backgroundImage = "url('images/bulles/bulleViergeGauche.png')";
-            img.style.backgroundRepeat = "no-repeat";
-            img.style.backgroundPosition = "left top";
-            img.style.height = "20vh";
             newP.innerText = dialogues;
             closeBulle("popup_agresseur");
         break;
@@ -119,9 +113,6 @@ function submitBulle(nom, dialogue){
             img = document.getElementById('img_couche_3_bulle_droite');
             newP = document.getElementById("p_couche_3_droite");
             img.style.backgroundImage = "url('images/bulles/bulleViergeDroite.png')";
-            img.style.backgroundRepeat = "no-repeat";
-            img.style.backgroundPosition = "right top";
-            img.style.height = "20vh";
             newP.innerText = dialogues;
             closeBulle("popup_victime");
         break;

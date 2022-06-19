@@ -7,18 +7,19 @@
             <p id="creerPost">Créer un poste</p>
             <button id="publierPost" class="bouton">Publier</button>
         </div>
-        <div id="post_img" class="post_img">
+
+        <div id="post_img">
             <div id="img_couche_1" class="post_img_couche_1">
                 <div id="img_couche_2" class="post_img_couche_2">
                     <div id="img_couche_3" class="post_img_couche_3">
-                        <div id="img_couche_3_titre">
-                            <p id="p_couche_3_titre"></p>
+                        <div id="img_couche_3_titre" class="img_couche_3">
+                            <p id="p_couche_3_titre" class="p_couche_3"></p>
                         </div>
-                        <div id="img_couche_3_bulle_gauche">
-                            <p id="p_couche_3_gauche"></p>
+                        <div id="img_couche_3_bulle_gauche" class="img_couche_3">
+                            <p id="p_couche_3_gauche" class="p_couche_3"></p>
                         </div>
-                        <div id="img_couche_3_bulle_droite">
-                            <p id="p_couche_3_droite"></p>
+                        <div id="img_couche_3_bulle_droite" class="img_couche_3">
+                            <p id="p_couche_3_droite" class="p_couche_3"></p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +156,7 @@
                 <img src="images/icones/croix.png" onclick="closeBulle('popup_titre')" />
             </div>
             <div class="popup_texte">
-                <textarea maxlength="50" minlength="5" placeholder="Donnez un titre à votre image" id="popup_titre_dialogue"></textarea>
+                <textarea maxlength="80" minlength="1" placeholder="Donnez un titre à votre image" id="popup_titre_dialogue"></textarea>
             </div>
             <div class="popup_bouton">
                 <button  onclick="submitBulle('img_couche_3_titre','popup_titre_dialogue')" class="bouton">Valider</button>
@@ -166,7 +167,7 @@
                 <img src="images/icones/croix.png" onclick="closeBulle('popup_agresseur')" />
             </div>
             <div class="popup_texte">
-                <textarea maxlength="50" minlength="5" placeholder="Donnez un titre à votre image" id="popup_agresseur_dialogue"></textarea>
+                <textarea maxlength="80" minlength="1" placeholder="Donnez un titre à votre image" id="popup_agresseur_dialogue"></textarea>
             </div>
             <div class="popup_bouton">
                 <button  onclick="submitBulle('img_couche_3_agresseur','popup_agresseur_dialogue')" class="bouton">Valider</button>
@@ -177,7 +178,7 @@
                 <img src="images/icones/croix.png" onclick="closeBulle('popup_victime')" />
             </div>
             <div class="popup_texte">
-                <textarea maxlength="50" minlength="5" placeholder="Donnez un titre à votre image" id="popup_victime_dialogue"></textarea>
+                <textarea maxlength="80" minlength="1" placeholder="Donnez un titre à votre image" id="popup_victime_dialogue"></textarea>
             </div>
             <div class="popup_bouton">
                 <button  onclick="submitBulle('img_couche_3_victime','popup_victime_dialogue')" class="bouton">Valider</button>
