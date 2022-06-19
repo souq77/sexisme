@@ -4,8 +4,8 @@
 }
 
 body {
-    margin: 0 37% !important;
-    background-color: #e5e5e5 !important;
+    /*margin: 0 37% !important;*/
+    /*background-color: #e5e5e5 !important;*/
 }
 
 .post_principal, .post_menu, .post_img, .post_outils {
@@ -13,7 +13,7 @@ body {
 }
 
 .post_principal {
-    background: blue;
+    /**/
 }
 
 .post_menu {
@@ -24,27 +24,147 @@ body {
     align-items: center;
 }
 
+#publierPost {
+    margin-right: 2%;
+    color: #fff;
+    background: #202945;
+    border-radius: 12px;
+    height: 4vh;
+    padding: 0 20px;
+    font-size: 4rem;
+}
+
+#creerPost {
+    font-size: 4rem;
+    transform: translateY(1rem);
+}
+
+#fermerPost {
+    margin-left: 2%;
+    height: 2.5vh;
+}
+
 .post_img {
     background-color: #fff;
     height: 78vh;
     padding: 5% 2% !important;
+    z-index: 999;
 }
 
-.img_post_img {
+.post_img_couche_1 {
     height: 100%;
     background-image: url('images/fond/fond-par-defaut.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
     background-position: center;
     border-radius: 12px;
 }
 
+.post_img_couche_2 {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.post_img_couche_3 {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#img_couche_3_titre {
+    width: 100%;
+    height: 10vh;
+    display: block;
+    opacity: 0;
+    background-color: blue;
+}
+#Blockdialogue{
+    padding: 10vh;
+    
+}
+#img_couche_3_bulle_gauche, #img_couche_3_bulle_droite {
+    width: 40%;
+    display: inline-block;
+    height: 10vh;
+    border: solid;
+    opacity: 0;
+    
+}
+#img_couche_3_bulle_gauche{
+    background-color: wheat;
+    
+}
+#img_couche_3_bulle_droite {
+    background-color: #818797;
+
+}
+@keyframes sous_outils {
+    from {
+        height: 0vh;
+    }
+
+    to {
+        height: 16vh;
+    }
+}
+
+.tools {
+    background-color: #747474;
+    height: 16vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: absolute;
+    bottom: 0vh;
+    width: 100vw;
+}
+
+#post_sous_outils_scenario {
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    /*grid-template-columns: repeat(auto-fill,minmax(27.5%,1fr));*/
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(27.5%,1fr);
+    overflow-x: auto;
+    font-size: 1.4rem;
+    background: #fff;
+}
+
+#post_sous_outils_personnages {
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    /*grid-template-columns: repeat(auto-fill,minmax(27.5%,1fr));*/
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(27.5%,1fr);
+    overflow-x: auto;
+    text-align: center;
+    font-size: 1.4rem;
+    background: #fff;
+}
+
+#post_sous_outils_bulles {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex: 1;
+    text-align: center;
+    font-size: 1.4rem;
+
+}
+
 .post_outils {
-    background-color: #f4f4f4;
+    background-color: #fff;
     height: 16vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    /*border-top: 4px solid #e5e5e5;*/
+    box-shadow: 0 -4px 8px #e5e5e5;
 }
 
 .post_outils > div {
@@ -54,16 +174,54 @@ body {
     align-items: center;
 }
 
-.post_outils img:hover {
-    cursor: pointer;
+.post_outils figcaption, #post_sous_outils_scenario figcaption, #post_sous_outils_personnages figcaption {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 2rem;
+    color: #202945;
 }
 
-.post_outils img {
+.post_outils img, #post_sous_outils_scenario img, #post_sous_outils_personnages img {
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
-.post_outils figcaption {
-    text-align: center;
-    font-size: 1.4rem;
+.post_outils img {
+    height: 6vh;
+}
+
+#post_sous_outils_scenario img {
+    height: 10vh;
+}
+
+#post_sous_outils_personnages img {
+    height: 10vh;
+}
+
+.post_outils img:hover, #post_sous_outils_scenario, #post_sous_outils_personnages, #post_sous_outils_bulles {
+    cursor: pointer;
+}
+
+.fond_gris {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    opacity: .8;
+    display: none;
+}
+
+.popup_bulle {
+    position: absolute;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 8vh));
+    height: 50vh;
+    width: 50vw;
+    /*display: none;*/
+    z-index: -1;
+    opacity: 0;
 }
