@@ -193,25 +193,25 @@
 </body>
 
 </body>
-<script type="text/javascript" src="fonctionPost.js"></script>
 <script>
 $("#publierPost").click(function() {
+document.getElementById('img_couche_1').style.backgroundSize ='';
 html2canvas($("#img_couche_1"), {
     onrendered: function(canvas) {
         $("#post_img").show();
         var dataURL = canvas.toDataURL();
-        console.log(dataURL);
         $.ajax({
             type: "POST",
-            url: "save_image.php",
+            url: "save_image.php?action=ajoutPost",
             data: {
                 imgBase64: dataURL
-            }
-        }).done(function(o) {
-            console.log('saved');
-            
+            },
+            success : function(resultat, statut)
+            { 
+                window.location.href = "index.php?page=postDescription&id="+resultat;                
+            },
         });
     }
-});
+    });
 });
 </script>

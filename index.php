@@ -2,7 +2,8 @@
 require 'connexionBDD.php';
 ?>
 <html>
-    
+<script type="text/javascript" src="fonctionPost.js"></script>
+
 <?php
     include 'head.php';
     include 'header.php';
@@ -13,11 +14,14 @@ require 'connexionBDD.php';
                 break;
             case 'post':
                 include 'bodyPost.php';
-                break;   
-            default:
-                include 'bodyFeed.php';
                 break;
+            case 'postDescription':
+                include 'bodyPostDescription.php';
+                break;   
         }
+    }else{
+
+        include 'bodyFeed.php';
     }
     include 'footer.php';
 
