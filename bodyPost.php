@@ -1,13 +1,11 @@
 <body>
     <div class="post_principal">
-
     <!-- Header. -->
         <div class="post_menu">
             <img id="fermerPost" src="images/icones/croix.png" />
             <p id="creerPost">Créer un poste</p>
             <button id="publierPost" class="bouton">Publier</button>
         </div>
-
         <div id="post_img">
             <div id="img_couche_1" class="post_img_couche_1">
                 <div id="img_couche_2" class="post_img_couche_2">
@@ -25,9 +23,6 @@
                 </div>
             </div>
         </div>
-
-
-
         <!-- Sous-outils bloc 1. -->
         <div class="tools" id="post_sous_outils_scenario">
             <div onclick="scenario('soiree')">
@@ -67,9 +62,6 @@
                 </figure>
             </div>
         </div>
-
-
-
         <!-- Sous-outils bloc 2. -->
         <div class="tools" id="post_sous_outils_personnages">
             <div onclick="personnages('1')">
@@ -121,9 +113,6 @@
                 </figure>
             </div>
         </div>
-
-
-
         <!-- Sous-outils bloc 3. -->
         <div class="tools" id="post_sous_outils_bulles">
             <div onclick="bulles('popup_titre')">
@@ -145,12 +134,8 @@
                 </figure>
             </div>
         </div>
-
-
-
         <!-- Popups de dialogues. -->
         <div class="fond_gris"></div>
-
         <div class="popup_bulle" id="popup_titre">
             <div class="popup_img">
                 <img src="images/icones/croix.png" onclick="closeBulle('popup_titre')" />
@@ -184,9 +169,6 @@
                 <button  onclick="submitBulle('img_couche_3_victime','popup_victime_dialogue')" class="bouton">Valider</button>
             </div>
         </div>
-
-
-
         <!-- Barre d'outils statique. -->
         <div class="post_outils">
             <div id="outil_gauche" onclick="reveal('Scenario'), selectOutil('outil_gauche')">
@@ -208,6 +190,27 @@
                 </figure>
             </div>
         </div>
-
     </div>
 </body>
+<script>
+$("#publierPost").click(function() {
+document.getElementById('img_couche_1').style.backgroundSize ='';
+html2canvas($("#img_couche_1"), {
+    onrendered: function(canvas) {
+        $("#post_img").show();
+        var dataURL = canvas.toDataURL();
+        $.ajax({
+            type: "POST",
+            url: "save_image.php?action=ajoutPost",
+            data: {
+                imgBase64: dataURL
+            },
+            success : function(resultat, statut)
+            { 
+                window.location.href = "index.php?page=postDescription&id="+resultat;                
+            },
+        });
+    }
+    });
+});
+</script>
