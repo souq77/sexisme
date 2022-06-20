@@ -14,10 +14,11 @@ if (isset($_GET['action'])) {
             $sql = "INSERT INTO post (idOwner, description, image) VALUES (?,?,?)";
             $stmt= $conn->prepare($sql);
             $stmt->execute([1, 'bla bla bla', $file]);
-
+            $id = 1;
             foreach ($conn->query('SELECT MAX(idPost) as idPost FROM `post`') as $value) {
-                echo $value['idPost'];
+                $id = $value['idPost'];
             }
+            echo $id;
             break;
         case 'ajoutDescription':
             $description = $_POST['description'];  
