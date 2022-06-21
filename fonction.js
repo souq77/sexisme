@@ -1,39 +1,55 @@
 function reveal(type) {
     switch (type) {
         case 'Scenario':
-            displayTool("post_sous_outils_scenario");
+            displayTool("post_sous_outils_scenario", "post_outils_phrase_1");
             break;
         case 'Personnage':
-            displayTool("post_sous_outils_personnages");
+            displayTool("post_sous_outils_personnages", "post_outils_phrase_2");
             break;
         case 'Bulle':
-            displayTool("post_sous_outils_bulles");
+            displayTool("post_sous_outils_bulles", "post_outils_phrase_3");
             break;
     }
 }
 
-function fermeOutils () {
+function fermeOutils() {
     let tools = document.getElementsByClassName("tools");
 
     for (let i = 0; i < tools.length; i++) {
         const element = tools[i];
         //element.style.display = "none";        
-        element.style.bottom = "0vh";        
+        element.style.bottom = "0vh";       
+        element.style.transition = "1s";       
     }
 }
 
-function displayTool(idDiv) {
+function fermePhrases() {
+    let phrases = document.getElementsByClassName("post_outils_phrases");
+
+    for (let i = 0; i < phrases.length; i++) {
+        const element = phrases[i];
+        //element.style.display = "none";        
+        element.style.opacity = "0";       
+        element.style.transition = "1s";    
+    }
+}
+
+function displayTool(idDiv, idTxt) {
     let postImg = document.getElementById("post_img");
     let tool = document.getElementById(idDiv);
-    if (tool.style.bottom != "0vh") {
+    let phrase = document.getElementById(idTxt);
+    /*if (tool.style.bottom != "0vh") {
         fermeOutils();
-        //postImg.style.height = "78vh";
-    } else {
+        postImg.style.height = "78vh";
+    } else {*/
         fermeOutils();
+        fermePhrases();
         tool.style.bottom = "16vh";
         tool.style.transition = "1s";
+        phrase.style.opacity = "1";
+        phrase.style.transition = "1s";
         //postImg.style.height = "62vh";
-    }
+    //}
 }
 
 function scenario(type) {
@@ -150,37 +166,37 @@ function selectOutil(nom) {
 
     switch (nom) {
         case "outil_gauche":
-            if (leftTool.style.opacity == "1") {
+            /*if (leftTool.style.opacity == "1") {
                 leftTool.style.opacity = ".5";
                 middleTool.style.opacity = ".5";
                 rightTool.style.opacity = ".5";            
-            } else {
+            } else {*/
                 leftTool.style.opacity = "1";
                 middleTool.style.opacity = ".5";
                 rightTool.style.opacity = ".5";            
-            }
+            //}
         break;
         case "outil_milieu":
-            if (middleTool.style.opacity == "1") {
+            /*if (middleTool.style.opacity == "1") {
                 leftTool.style.opacity = ".5";
                 middleTool.style.opacity = ".5";
                 rightTool.style.opacity = ".5";            
-            } else {
+            } else {*/
                 leftTool.style.opacity = ".5";
                 middleTool.style.opacity = "1";
                 rightTool.style.opacity = ".5";            
-            }
+            //}
         break;
         case "outil_droit":  
-        if (rightTool.style.opacity == "1") {
+        /*if (rightTool.style.opacity == "1") {
             leftTool.style.opacity = ".5";
             middleTool.style.opacity = "1";
             rightTool.style.opacity = ".5";            
-        } else {
+        } else {*/
             leftTool.style.opacity = ".5";
             middleTool.style.opacity = ".5";
             rightTool.style.opacity = "1";            
-        }
+        //}
         break;
     }
     

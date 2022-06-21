@@ -2,6 +2,9 @@
     <div class="post_principal">
     <!-- Header. -->
         <div class="post_menu">
+            <img id="tache_rouge" src="images/icones/tache-rouge.png" />
+            <img id="tache_bleue" src="images/icones/tache-bleue.png" />
+
             <img id="fermerPost" src="images/icones/croix.png" />
             <p id="creerPost">Créer un poste</p>
             <button id="publierPost" class="bouton" onclick="closeBulle('popup_titre'), closeBulle('popup_agresseur'), closeBulle('popup_victime')">Suivant</button>
@@ -178,6 +181,12 @@
         </div>
         <!-- Barre d'outils statique. -->
         <div class="post_outils">
+            <div id="post_outils_phrases">
+                <p id="post_outils_phrase_1" class="post_outils_phrases">Où est-ce que la scène s'est-elle déroulée ?</p>
+                <p id="post_outils_phrase_2" class="post_outils_phrases">Que s'est-il passé d'inapproprié ?</p>
+                <p id="post_outils_phrase_3" class="post_outils_phrases">Quelle a été votre échange le plus marquant ?</p>
+            </div>
+
             <div id="outil_gauche" onclick="reveal('Scenario'), selectOutil('outil_gauche')">
                 <figure>
                     <img src="images/icones/scenario.png" alt="">
