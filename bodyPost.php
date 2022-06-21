@@ -178,6 +178,12 @@
         </div>
         <!-- Barre d'outils statique. -->
         <div class="post_outils">
+            <div id="post_outils_phrases">
+                <p id="post_outils_phrase_1" class="post_outils_phrases">Où est-ce que la scène s'est-elle déroulée ?</p>
+                <p id="post_outils_phrase_2" class="post_outils_phrases">Que s'est-il passé d'inapproprié ?</p>
+                <p id="post_outils_phrase_3" class="post_outils_phrases">Quelle a été votre échange le plus marquant ?</p>
+            </div>
+
             <div id="outil_gauche" onclick="reveal('Scenario'), selectOutil('outil_gauche')">
                 <figure>
                     <img src="images/icones/scenario.png" alt="">

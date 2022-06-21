@@ -2,6 +2,7 @@
 * {
     padding: 0;
     box-sizing: border-box;
+    font-family: comic sans ms !important;
 }
 
 .bouton {
@@ -80,7 +81,8 @@ button, textarea, input, p {
     background-image: url('images/fond/fond-par-defaut.jpg');
     background-repeat: no-repeat;
     /*background-size: cover;*/
-    background-size: 100% 100%;
+    /*background-size: 100% 100%;*/
+    background-size: 100vw auto;
     background-position: center;
     border-radius: 12px;
 }
@@ -88,8 +90,10 @@ button, textarea, input, p {
 .post_img_couche_2 {
     height: 100%;
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 55vh;
+    /*background-position: bottom;
+    background-size: 55vh;*/
+    background-position: 0 6vh;
+    background-size: 45vh;
 }
 
 .post_img_couche_3 {
@@ -106,12 +110,15 @@ button, textarea, input, p {
 
 #img_couche_3_titre {
     background-size: contain;
-    background-position: center top;
+    /*background-position: center top;*/
+    background-position: bottom;
     width: 96%;
     height: 15vh;
-    padding: 0 2vw;
-    background-size: 100% 20vh;
+    /*padding: 0 2vw;*/
+    /*background-size: 100% 20vh;*/
+    background-size: 85vw 10vh;
     left: 2vw;
+    top: 38vh;
 }
 
 #img_couche_3_bulle_gauche {
@@ -136,11 +143,15 @@ button, textarea, input, p {
     font-size: 4rem;
     text-align: center;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 50px;
 }
 
 #p_couche_3_titre {
-    /**/
+    margin-top: 10vh;
+    transform: translateY(-2vh);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #p_couche_3_gauche {
@@ -325,8 +336,32 @@ button, textarea, input, p {
     text-align: center;
 }
 
-#outil_gauche, #outil_milieu, #outil_droit {
+#outil_milieu, #outil_droit {
     opacity: .5;
+}
+
+#outil_gauche {
+    opacity: 1;
+}
+
+#post_sous_outils_scenario {
+    bottom: 16vh;
+}
+
+#post_outils_phrases {
+    position: absolute;
+}
+
+.post_outils_phrases {
+    position: absolute;
+    bottom: 28vh;
+    width: 100vw;
+    text-align: center;
+    opacity: 0;
+}
+
+#post_outils_phrase_1 {
+    opacity: 1;
 }
 
 
