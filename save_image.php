@@ -11,9 +11,9 @@ if (isset($_GET['action'])) {
             $data = base64_decode($img);  
             $file = UPLOAD_DIR . uniqid() . '.png';  
             $success = file_put_contents($file, $data);  
-            $sql = "INSERT INTO post (idOwner, description, image) VALUES (?,?,?)";
+            $sql = "INSERT INTO post (idOwner, description, hashtag, image) VALUES (?,?,?,?)";
             $stmt= $conn->prepare($sql);
-            $stmt->execute([1, 'bla bla bla', $file]);
+            $stmt->execute([1, 'bla bla bla','_' ,$file]);
             $id = 1;
             foreach ($conn->query('SELECT MAX(idPost) as idPost FROM `post`') as $value) {
                 $id = $value['idPost'];

@@ -210,7 +210,7 @@
 </body>
 <script>
 $("#publierPost").click(function() {
-html2canvas($("#img_couche_1"), {
+html2canvas($("#post_img"), {
     onrendered: function(canvas) {
         $("#post_img").show();
         var dataURL = canvas.toDataURL();
@@ -222,6 +222,7 @@ html2canvas($("#img_couche_1"), {
             },
             success : function(resultat, statut)
             { 
+                console.log(resultat);
                 window.location.href = "index.php?page=postDescription&id="+resultat;                
             },
         });
