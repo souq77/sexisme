@@ -4,10 +4,11 @@
         <div class="post_menu">
             <img id="fermerPost" src="images/icones/croix.png" />
             <p id="creerPost">Créer un poste</p>
-            <button id="publierPost" class="bouton">Publier</button>
+            <button id="publierPost" class="bouton" onclick="closeBulle('popup_titre'), closeBulle('popup_agresseur'), closeBulle('popup_victime')">Suivant</button>
         </div>
         <div id="post_img">
             <div id="img_couche_1" class="post_img_couche_1">
+
                 <div id="img_couche_2" class="post_img_couche_2">
                     <div id="img_couche_3" class="post_img_couche_3">
                         <div id="img_couche_3_titre" class="img_couche_3">
@@ -39,25 +40,31 @@
             </div>
             <div onclick="scenario('taff')">
                 <figure>
-                    <img src="images/scenarios/rue.png" alt="">
+                    <img src="images/scenarios/travail.png" alt="">
                     <figcaption>Au travail</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('residence')">
                 <figure>
-                    <img src="images/scenarios/rue.png" alt="">
+                    <img src="images/scenarios/maison.png" alt="">
                     <figcaption>À la maison</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('activite')">
                 <figure>
-                    <img src="images/scenarios/rue.png" alt="">
+                    <img src="images/scenarios/activite.png" alt="">
                     <figcaption>En activités</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('ami')">
                 <figure>
-                    <img src="images/scenarios/rue.png" alt="">
+                    <img src="images/scenarios/ami.png" alt="">
+                    <figcaption>Chez un ami</figcaption>
+                </figure>
+            </div>
+            <div onclick="scenario('autre')">
+                <figure>
+                    <img src="images/scenarios/autre.png" alt="">
                     <figcaption>Autre lieu</figcaption>
                 </figure>
             </div>
@@ -194,7 +201,7 @@
 </body>
 <script>
 $("#publierPost").click(function() {
-html2canvas($("#post_img"), {
+html2canvas($("#img_couche_1"), {
     onrendered: function(canvas) {
         $("#post_img").show();
         var dataURL = canvas.toDataURL();

@@ -27,12 +27,12 @@ function displayTool(idDiv) {
     let tool = document.getElementById(idDiv);
     if (tool.style.bottom != "0vh") {
         fermeOutils();
-        postImg.style.height = "78vh";
+        //postImg.style.height = "78vh";
     } else {
         fermeOutils();
         tool.style.bottom = "16vh";
         tool.style.transition = "1s";
-        postImg.style.height = "62vh";
+        //postImg.style.height = "62vh";
     }
 }
 
@@ -46,16 +46,19 @@ function scenario(type) {
             img.style.backgroundImage = "url('images/scenarios/rue.png')";       
         break;
         case "taff":  
-            img.style.backgroundImage = "url('images/scenarios/jerry.png')";      
+            img.style.backgroundImage = "url('images/scenarios/travail.png')";      
         break;
         case "residence":  
-            img.style.backgroundImage = "url('images/scenarios/jerry.png')";      
+            img.style.backgroundImage = "url('images/scenarios/maison.png')";      
         break;
         case "activite": 
-            img.style.backgroundImage = "url('images/scenarios/jerry.png')";       
+            img.style.backgroundImage = "url('images/scenarios/activite.png')";       
         break;
         case "ami":
-            img.style.backgroundImage = "url('images/scenarios/jerry.png')";        
+            img.style.backgroundImage = "url('images/scenarios/ami.png')";        
+        break;
+        case "autre":
+            img.style.backgroundImage = "url('images/scenarios/autre.png')";        
         break;
     }
 }
@@ -64,28 +67,28 @@ function personnages(type) {
     let img = document.getElementById("img_couche_2");
     switch (type) {
         case "1":
-            img.style.backgroundImage = "url('images/personnages/jerry.png')"; 
+            img.style.backgroundImage = "url('images/personnages/sifflement-personnages.png')"; 
         break;
         case "2":
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";       
+            img.style.backgroundImage = "url('images/personnages/regard-personnages.png')";       
         break;
         case "3":  
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";      
+            img.style.backgroundImage = "url('images/personnages/menace-personnages.png')";      
         break;
         case "4":  
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";      
+            img.style.backgroundImage = "url('images/personnages/agression-personnages.png')";      
         break;
         case "5": 
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";       
+            img.style.backgroundImage = "url('images/personnages/exhibition-personnages.png')";       
         break;
         case "6":
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";        
+            img.style.backgroundImage = "url('images/personnages/viol-personnages.png')";        
         break;
         case "7":
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";        
+            img.style.backgroundImage = "url('images/personnages/pornographie-personnages.png')";        
         break;
         case "8":
-            img.style.backgroundImage = "url('images/personnages/jerry.png')";        
+            img.style.backgroundImage = "url('images/personnages/remarque-personnages.png')";        
         break;
     }
 }

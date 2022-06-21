@@ -14,21 +14,22 @@ if (isset($_GET['action'])) {
             $sql = "INSERT INTO post (idOwner, description, image) VALUES (?,?,?)";
             $stmt= $conn->prepare($sql);
             $stmt->execute([1, 'bla bla bla', $file]);
-
+            $id = 1;
             foreach ($conn->query('SELECT MAX(idPost) as idPost FROM `post`') as $value) {
-                echo $value['idPost'];
+                $id = $value['idPost'];
             }
+            echo $id;
             break;
         case 'ajoutDescription':
             $description = $_POST['description'];  
-            $sql = "UPDATE `post` SET `description`= ? WHERE idPost=?;";
+            $hashtag =$_POST['hashtag'];
+            $sql = "UPDATE `post` SET `description`= ?, `hashtag`= ? WHERE idPost=?;";
             $stmt= $conn->prepare($sql);
-            $stmt->execute([$description,$_GET['id']]);
+            $stmt->execute([$description,$hashtag,$_GET['id']]);
+            var_dump($_POST);
             break;
         default:
             # code...
             break;
     }
 }
-
-?>
