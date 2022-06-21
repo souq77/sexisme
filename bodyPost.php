@@ -194,8 +194,7 @@
 </body>
 <script>
 $("#publierPost").click(function() {
-document.getElementById('img_couche_1').style.backgroundSize ='';
-html2canvas($("#img_couche_1"), {
+html2canvas($("#post_img"), {
     onrendered: function(canvas) {
         $("#post_img").show();
         var dataURL = canvas.toDataURL();
