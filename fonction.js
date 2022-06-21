@@ -217,6 +217,27 @@ function selectOutil(nom) {
     }*/
 }
 
+function buttonSwitch() {
+    const boutonFond = document.getElementById("display_sondage_bouton_fond");
+    const boutonSwitch = document.getElementById("display_sondage_bouton_switch");
+    const sondagePreview = document.getElementById("sondage_preview");
+
+
+    if (boutonFond.style.justifyContent == "end") {
+        boutonFond.style.justifyContent = "start";
+        boutonFond.style.background = "#202945";
+        sondagePreview.style.marginTop = "-3vh";
+        sondagePreview.style.opacity = "0";
+        sondagePreview.style.transition = "1s";
+    } else {
+        boutonFond.style.justifyContent = "end";
+        boutonFond.style.background = "#ff833e";
+        sondagePreview.style.marginTop = "0vh";
+        sondagePreview.style.opacity = "1";
+        sondagePreview.style.transition = "1s";
+    }
+}
+
 
 
 
