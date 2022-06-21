@@ -55,11 +55,11 @@
     $('#tagsContent[value]').val(function() {
         hashtag=$(this).attr("value");
     });
-    let rep1 = $("#rep1").checked;
-    let rep2 = $("#rep2").checked;
-    let rep3 = $("#rep3").checked;
-    let rep4 = $("#rep4").checked;
-    
+    let rep1 = document.getElementById('rep1').checked ? 1 : 0;
+    let rep2 = document.getElementById('rep2').checked ? 1 : 0;
+    let rep3 = document.getElementById('rep3').checked ? 1 : 0;
+    let rep4 = document.getElementById('rep4').checked ? 1 : 0;
+    console.log(rep1);
     $.ajax({
         type: "POST",
         url: "save_image.php?action=ajoutDescription&id="+id,

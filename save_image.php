@@ -26,7 +26,9 @@ if (isset($_GET['action'])) {
             $sql = "UPDATE `post` SET `description`= ?, `hashtag`= ? WHERE idPost=?;";
             $stmt= $conn->prepare($sql);
             $stmt->execute([$description,$hashtag,$_GET['id']]);
-            var_dump($_POST);
+            $sql = "INSERT INTO `sondage`(`idPost`, `rep1`, `rep2`, `rep3`, `rep4`) VALUES (?,?,?,?,?)";
+            $stmt= $conn->prepare($sql);
+            $stmt->execute([$_GET['id'],$_POST['rep1'],$_POST['rep2'],$_POST['rep3'],$_POST['rep4']]);
             break;
         default:
             # code...
