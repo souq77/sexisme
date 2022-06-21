@@ -49,6 +49,8 @@ button, textarea, input, p {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
 }
 
 #publierPost {
@@ -63,6 +65,21 @@ button, textarea, input, p {
 #fermerPost {
     margin-left: 2%;
     height: 2.5vh;
+}
+
+#tache_rouge, #tache_bleue {
+    position: absolute;
+    opacity: .4;
+}
+
+#tache_rouge {
+    left: 0;
+    width: 15vh;
+}
+
+#tache_bleue {
+    right: 0vh;
+    width: 20vh;
 }
 
 #post_img {

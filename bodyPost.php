@@ -2,6 +2,9 @@
     <div class="post_principal">
     <!-- Header. -->
         <div class="post_menu">
+            <img id="tache_rouge" src="images/icones/tache-rouge.png" />
+            <img id="tache_bleue" src="images/icones/tache-bleue.png" />
+
             <img id="fermerPost" src="images/icones/croix.png" />
             <p id="creerPost">Créer un poste</p>
             <button id="publierPost" class="bouton" onclick="closeBulle('popup_titre'), closeBulle('popup_agresseur'), closeBulle('popup_victime')">Suivant</button>
