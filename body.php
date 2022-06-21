@@ -1,17 +1,15 @@
 <body>
     <div class="post_principal">
+
     <!-- Header. -->
         <div class="post_menu">
             <img id="fermerPost" src="images/icones/croix.png" />
             <p id="creerPost">Créer un poste</p>
-            <button id="publierPost" class="bouton" onclick="closeBulle('popup_titre'), closeBulle('popup_agresseur'), closeBulle('popup_victime')">Suivant</button>
-            
-            <img id="tache_rouge" src="images/icones/tache-rouge.png" />
-            <img id="tache_bleue" src="images/icones/tache-bleue.png" />
+            <button id="publierPost" class="bouton">Publier</button>
         </div>
+
         <div id="post_img">
             <div id="img_couche_1" class="post_img_couche_1">
-
                 <div id="img_couche_2" class="post_img_couche_2">
                     <div id="img_couche_3" class="post_img_couche_3">
                         <div id="img_couche_3_titre" class="img_couche_3">
@@ -27,6 +25,9 @@
                 </div>
             </div>
         </div>
+
+
+
         <!-- Sous-outils bloc 1. -->
         <div class="tools" id="post_sous_outils_scenario">
             <div onclick="scenario('soiree')">
@@ -43,35 +44,32 @@
             </div>
             <div onclick="scenario('taff')">
                 <figure>
-                    <img src="images/scenarios/travail.png" alt="">
+                    <img src="images/scenarios/rue.png" alt="">
                     <figcaption>Au travail</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('residence')">
                 <figure>
-                    <img src="images/scenarios/maison.png" alt="">
+                    <img src="images/scenarios/rue.png" alt="">
                     <figcaption>À la maison</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('activite')">
                 <figure>
-                    <img src="images/scenarios/activite.png" alt="">
+                    <img src="images/scenarios/rue.png" alt="">
                     <figcaption>En activités</figcaption>
                 </figure>
             </div>
             <div onclick="scenario('ami')">
                 <figure>
-                    <img src="images/scenarios/ami.png" alt="">
-                    <figcaption>Chez un ami</figcaption>
-                </figure>
-            </div>
-            <div onclick="scenario('autre')">
-                <figure>
-                    <img src="images/scenarios/autre.png" alt="">
+                    <img src="images/scenarios/rue.png" alt="">
                     <figcaption>Autre lieu</figcaption>
                 </figure>
             </div>
         </div>
+
+
+
         <!-- Sous-outils bloc 2. -->
         <div class="tools" id="post_sous_outils_personnages">
             <div onclick="personnages('1')">
@@ -123,6 +121,9 @@
                 </figure>
             </div>
         </div>
+
+
+
         <!-- Sous-outils bloc 3. -->
         <div class="tools" id="post_sous_outils_bulles">
             <div onclick="bulles('popup_titre')">
@@ -144,8 +145,12 @@
                 </figure>
             </div>
         </div>
+
+
+
         <!-- Popups de dialogues. -->
         <div class="fond_gris"></div>
+
         <div class="popup_bulle" id="popup_titre">
             <div class="popup_img">
                 <img src="images/icones/croix.png" onclick="closeBulle('popup_titre')" />
@@ -179,14 +184,11 @@
                 <button  onclick="submitBulle('img_couche_3_victime','popup_victime_dialogue')" class="bouton">Valider</button>
             </div>
         </div>
+
+
+
         <!-- Barre d'outils statique. -->
         <div class="post_outils">
-            <div id="post_outils_phrases">
-                <p id="post_outils_phrase_1" class="post_outils_phrases">Où est-ce que la scène s'est-elle déroulée ?</p>
-                <p id="post_outils_phrase_2" class="post_outils_phrases">Que s'est-il passé d'inapproprié ?</p>
-                <p id="post_outils_phrase_3" class="post_outils_phrases">Quelle a été votre échange le plus marquant ?</p>
-            </div>
-
             <div id="outil_gauche" onclick="reveal('Scenario'), selectOutil('outil_gauche')">
                 <figure>
                     <img src="images/icones/scenario.png" alt="">
@@ -206,26 +208,6 @@
                 </figure>
             </div>
         </div>
+
     </div>
 </body>
-<script>
-$("#publierPost").click(function() {
-html2canvas($("#img_couche_1"), {
-    onrendered: function(canvas) {
-        $("#post_img").show();
-        var dataURL = canvas.toDataURL();
-        $.ajax({
-            type: "POST",
-            url: "save_image.php?action=ajoutPost",
-            data: {
-                imgBase64: dataURL
-            },
-            success : function(resultat, statut)
-            { 
-                window.location.href = "index.php?page=postDescription&id="+resultat;                
-            },
-        });
-    }
-    });
-});
-</script>

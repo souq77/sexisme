@@ -13,6 +13,7 @@
     padding: 0 20px;
     font-size: 4rem;
     cursor: pointer;
+    z-index: 2;
 }
 
 .bouton:hover {
