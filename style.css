@@ -1,3 +1,4 @@
+/* GENERAL SETTINGS. */
 * {
     padding: 0;
     box-sizing: border-box;
@@ -10,8 +11,26 @@
     height: 4vh;
     padding: 0 20px;
     font-size: 4rem;
+    cursor: pointer;
 }
 
+.bouton:hover {
+    background: #202945;
+}
+
+.bouton:active {
+    background: #202945;
+}
+
+button, textarea, input, p {
+    font-size: 4rem !important;
+}
+
+
+
+
+
+/* PAGE CRÉATION POSTE 1. */
 .post_principal, .post_menu, .post_img, .post_outils {
     width: 100%;
 }
@@ -21,11 +40,14 @@
 }
 
 .post_menu {
-    background-color: #f4f4f4;
+    /*background-color: #f4f4f4;*/
+    background-color: #fff;
+    box-shadow: 0 4px 8px #e5e5e5;
     height: 6vh;    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 12px;
 }
 
 #publierPost {
@@ -44,12 +66,13 @@
 
 #post_img {
     background-color: #fff;
-    height: 78vh;
-    /*padding: 5% 2% !important;*/
-    /*z-index: 999;*/
-    width: 92vw;
-    transform: translateX(4vw);
-    padding: 4vw 0px;
+    /*height: 78vh;
+    width: 92vw;*/
+    height: 100vw;
+    width: 100vw;
+    /*transform: translateX(4vw);
+    padding: 4vw 0px;*/
+    padding: 2vh;
 }
 
 .post_img_couche_1 {
@@ -92,21 +115,21 @@
 }
 
 #img_couche_3_bulle_gauche {
-    width: 47%;
+    width: 45%;
     height: 20vh;
     background-size: contain;
     background-size: 100% 100%;
-    top: 18.5vh;
-    left: 2vw;
+    top: 10vh;
+    left: 4.5vw;
 }
 
 #img_couche_3_bulle_droite {
-    width: 47%;
+    width: 45%;
     height: 20vh;
     background-size: contain;
     background-size: 100% 100%;
-    top: 18.5vh;
-    right: 2vw;
+    top: 10vh;
+    right: 4.5vw;
 }
 
 .p_couche_3 {
@@ -304,4 +327,50 @@
 
 #outil_gauche, #outil_milieu, #outil_droit {
     opacity: .5;
+}
+
+
+
+
+
+/* PAGE CRÉATION POSTE 2. */
+#description {
+    display: flex;
+    width: 92vw;
+    transform: translateX(4vw);
+    padding: 4vw 0px;
+}
+
+#div_descriptionImg, #div_descriptionTxt {
+    display: flex;
+}
+
+#div_descriptionImg {
+    flex: 1;
+    margin-right: 2vw;
+}
+
+#div_descriptionImg img {
+    width: 100%;
+}
+
+#div_descriptionTxt {
+    position: relative;
+    flex: 4;
+    margin-left: 2vw;
+}
+
+#div_descriptionTxt textarea {
+    width: 100%;
+    border: none;
+    z-index: 2;
+    background: transparent;
+}
+
+#fauxPlaceholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    display: block;
 }

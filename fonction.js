@@ -27,12 +27,12 @@ function displayTool(idDiv) {
     let tool = document.getElementById(idDiv);
     if (tool.style.bottom != "0vh") {
         fermeOutils();
-        postImg.style.height = "78vh";
+        //postImg.style.height = "78vh";
     } else {
         fermeOutils();
         tool.style.bottom = "16vh";
         tool.style.transition = "1s";
-        postImg.style.height = "62vh";
+        //postImg.style.height = "62vh";
     }
 }
 
