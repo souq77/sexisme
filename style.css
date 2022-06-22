@@ -27,6 +27,10 @@ button, textarea, input, p {
     font-size: 4rem !important;
 }
 
+.gras {
+    font-weight: bold;
+}
+
 
 
 
@@ -530,4 +534,122 @@ button, textarea, input, p {
 .sondage_preview_reponse_value {
     display: flex;
     align-items: center;
+}
+
+
+
+
+
+/* PAGE COMMENTAIRES. */
+#post_commentaires_entete {
+    background-color: #fff;
+    box-shadow: 0 4px 8px #e5e5e5;
+    height: 6vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /*margin-bottom: 12px;*/
+    /*position: relative;
+    overflow: hidden;*/
+}
+
+.post_commentaires_entete_perso {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+#post_commentaires_entete_perso_chevron {
+    height: 3vh;
+}
+
+#post_commentaires_entete_perso_avatar {
+    height: 6vh;
+}
+
+#post_commentaires_entete_infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 5;
+}
+
+#post_commentaires_entete_infos_pseudo {
+    height: 3vh;
+}
+
+#post_commentaires_entete_infos_pseudo2 {
+    opacity: .5;
+    height: 3vh;
+}
+
+.post_commentaires_entete_infos_p {
+    flex: 1;
+}
+
+#post_commentaires_corps {
+    display: flex;
+    width: 100vw;
+    padding: 4vh;
+}
+
+#post_commentaires_corps_img, #post_commentaires_corps_txt {
+    display: flex;
+}
+
+#post_commentaires_corps_img {
+    width: 12vw;
+    align-items: start;
+    padding-right: 2vw;
+}
+
+#post_commentaires_corps_img img {
+    width: 10vw;
+}
+
+#post_commentaires_corps_txt {
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    border-radius: 20px;
+    width: 100%;
+    padding: 12px;
+}
+
+#post_commentaires_fixed {
+    position: fixed;
+    bottom: 0;
+    height: 16vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#post_commentaires_fixed_message {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+#post_commentaires_fixed_message textarea {
+    width: 90vw;
+    height: 4vh;
+    border-radius: 4vh;
+    padding: 8px 16px;
+}
+
+#post_commentaires_fixed_menu {
+    display: flex;
+}
+
+#post_commentaires_fixed_menu div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 12vh;
+}
+
+#post_commentaires_fixed_menu img {
+    height: 4vh;
 }
