@@ -531,3 +531,51 @@ button, textarea, input, p {
     display: flex;
     align-items: center;
 }
+#feed_post_user_post_img{
+
+    position: relative;
+}
+#feed_post_user_post_img_img{
+    width: 100%;
+}
+
+#feed_post_user_post_img_sondage{
+    position: absolute;
+    background-color: #000;
+    bottom: 8%;
+    right: 8%;
+}
+#feed_post_user_description, #feed_post_user{
+
+    padding: 5%;
+}
+#feed_post_user{
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+}
+
+#feed_post_user_img{
+    display: inline-block;
+    width: 15%;
+}
+
+#feed_post_user_info_2{
+    padding-left: 20%; 
+    width: fit-content;
+}
+
+#feed_post_user_info_2_nom{
+    font-weight: bold;
+}
+
+#feed_post_user_info_1{
+    display: inline-block;
+    flex : 1;
+
+}
+
+#feed_post_user_info_2_date{
+    flex : 3;
+    bottom: 0;
+    padding-left :40%;    
+}

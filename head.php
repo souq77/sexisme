@@ -1,5 +1,8 @@
 <head>
     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap" rel="stylesheet">
     <script src="https://jsuites.net/v4/jsuites.js"></script>
     <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
     <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
