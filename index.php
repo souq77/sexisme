@@ -18,6 +18,9 @@ require 'connexionBDD.php';
             case 'postDescription':
                 include 'bodyPostDescription.php';
                 break;   
+            case 'commentaires':
+                include 'bodyCommentaires.php';
+                break;   
         }
     }else{
 
@@ -26,7 +29,4 @@ require 'connexionBDD.php';
     include 'footer.php';
 
 ?>
-
-
-
 </html>
