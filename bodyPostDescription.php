@@ -102,25 +102,21 @@
     $('#tagsContent[value]').val(function() {
         hashtag=$(this).attr("value");
     });
-    let rep1 = document.getElementById('rep1').checked ? 1 : 0;
-    let rep2 = document.getElementById('rep2').checked ? 1 : 0;
-    let rep3 = document.getElementById('rep3').checked ? 1 : 0;
-    let rep4 = document.getElementById('rep4').checked ? 1 : 0;
-    console.log(rep1);
+    let sondage = document.getElementById('display_sondage_bouton_fond').style.backgroundColor == "rgb(32, 41, 69)" ? 0 : 1;
+    
+    console.log(sondage);
     $.ajax({
         type: "POST",
         url: "save_image.php?action=ajoutDescription&id="+id,
         data: {
             description: txt,
             hashtag : hashtag,
-            rep1 : rep1,
-            rep2 : rep2,
-            rep3 : rep3,
-            rep4 : rep4
+            sondage : sondage
+           
         },
         success : function(resultat, statut)
         { 
-            console.log(resultat);
+            //console.log(resultat);
            window.location.href = "index.php";
         },
     });
