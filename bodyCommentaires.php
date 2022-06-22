@@ -46,4 +46,48 @@
         </div>
     </div>
 
+    <!-- Popup sondage cadeau pour Rabie ;) -->
+    <div id="feed_sondage_popup">
+        <div id="feed_sondage_popup_question" onclick="feedSondagePopupClose()">
+            <div>
+                <p>Que ferais-tu à ma place ?</p>
+            </div>
+            <div>
+                <img id="feed_sondage_popup_close" src="images/icones/croix_bis.png" />
+            </div>
+        </div>
+        <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey()">
+            <p>A. Texte</p>
+        </div>
+        <div class="feed_sondage_popup_reponse">
+            <p>B. Texte</p>
+        </div>
+        <div class="feed_sondage_popup_reponse">
+            <p>C. Texte</p>
+        </div>
+        <div class="feed_sondage_popup_reponse">
+            <p>D. Texte</p>
+        </div>
+    </div>
+
+    <script>
+        function feedSondagePopupClose() {
+            const closure = document.getElementById("feed_sondage_popup");
+            const feedSondagePopup = document.getElementById("eed_sondage_popup");
+            closure.style.opacity = "0";
+            closure.style.transition = "1s";
+            feedSondagePopup.style.pointerEvents = "none";
+        }
+
+        /*document.addEventListener("click", () => {
+            const selectOption = document.getElementsByClassName("feed_sondage_popup_reponse");
+            selectOption.map(element => element.style.background = "#fff")
+        });*/
+
+        /*function choiceSelectSurvey() {
+            const selectOption = document.getElementsByClassName("feed_sondage_popup_reponse");
+            selectOption.foreach(element => 
+            element.style.backgound == "#000" ? element.style.backgound = "#fff" : element.style.backgound = "#000")
+        }*/
+    </script>
 </body>
