@@ -74,7 +74,7 @@
         success : function(resultat, statut)
         { 
             console.log(resultat);
-            window.location.href = "index.php";
+           window.location.href = "index.php";
         },
     });
 }
