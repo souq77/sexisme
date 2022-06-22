@@ -2,7 +2,6 @@
 * {
     padding: 0;
     box-sizing: border-box;
-    font-family: comic sans ms !important;
 }
 
 .bouton {
@@ -333,6 +332,7 @@ button, textarea, input, p {
     font-size: 4rem;
     background: #ffe8b4;
     border: none;
+    font-family: comic sans ms !important;
 }
 
 .popup_bouton {
@@ -418,12 +418,13 @@ button, textarea, input, p {
     border: none;
     z-index: 2;
     background: transparent;
+    padding-left: 8px;
 }
 
 #fauxPlaceholder {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 8px;
     font-weight: bold;
     display: block;
 }
@@ -447,6 +448,15 @@ button, textarea, input, p {
     align-items: center;
     display: flex;
     font-size: 2vh;
+    padding-right: 30px !important;
+}
+
+.jtags_label::after {
+    top: -8px !important;
+    right: 10px !important;
+    font-size: 30px !important;
+    transform: scaleY(0.8);
+    font-weight: bold;
 }
 
 #display_sondage {

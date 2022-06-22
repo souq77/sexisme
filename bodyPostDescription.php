@@ -21,7 +21,7 @@
         
         <div id="post_hashtags">
             <p>Ajoutez vos hashtags</p>
-            <jsuites-tags value="Canada,US,UK" id="tagsContent"></jsuites-tags>
+            <jsuites-tags value="sexisme" id="tagsContent"></jsuites-tags>
         </div>
 
         <div id="display_sondage">
