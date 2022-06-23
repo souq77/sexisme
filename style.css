@@ -31,6 +31,10 @@ button, textarea, input, p {
     font-weight: bold;
 }
 
+body {
+    padding-bottom: 18vh;
+}
+
 
 
 
@@ -38,10 +42,6 @@ button, textarea, input, p {
 /* PAGE CRÉATION POSTE 1. */
 .post_principal, .post_menu, .post_img, .post_outils {
     width: 100%;
-}
-
-.post_principal {
-    /**/
 }
 
 .post_menu {
@@ -56,6 +56,11 @@ button, textarea, input, p {
     overflow: hidden;
 }
 
+.post_menu a {
+    z-index: 2;
+    margin-left: 2%;
+}
+
 #publierPost {
     margin-right: 2%;
 }
@@ -66,7 +71,6 @@ button, textarea, input, p {
 }
 
 #fermerPost {
-    margin-left: 2%;
     height: 2.5vh;
 }
 
@@ -542,6 +546,27 @@ button, textarea, input, p {
     display: flex;
     flex-direction: column;
     box-shadow: 0 -4px 8px #e5e5e5;
+    background: #fff;
+    z-index: 3;
+}
+
+#bouton_create_post {
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    transform: translate(-50%, -120%);
+}
+
+#create_post {
+    background: #ff833e;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    border: 1px solid #fff;
 }
 
 #post_commentaires_fixed_message {
@@ -551,11 +576,13 @@ button, textarea, input, p {
 }
 
 #post_commentaires_fixed_message textarea {
-    width: 90vw;
+    width: 96vw;
     height: 4vh;
     border-radius: 4vh;
     padding: 8px 16px;
     background: #f8f8f8;
+    margin-right: 4vw;
+    position: relative;
 }
 
 #post_commentaires_fixed_menu {
@@ -584,25 +611,82 @@ button, textarea, input, p {
     display: none;
 }
 
-
-
-
-
-
 /* PAGE FEED. */
-.feedTriPosts {
+.feed_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.feed_menu > div {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #202954;
+    font-size: 8rem !important;
+    text-align: center;
+    transform: translateY(-8%);
+}
+
+.color_h1 {
+    color: #ff833e;
+}
+
+.feed_menu img {
+    width: 60px;
+}
+
+.feed_menu_div1, .feed_menu_div2 {
+    flex: 1;
+    justify-content: center;
+}
+
+.feed_menu_div2 {
+    flex: 2;
+    justify-content: center;
+}
+
+.feed_menu_div3 {
+    flex: 1;
+    justify-content: space-around;
+}
+
+.feed_menu_div1 > img {
+    width: 120px;
+}
+
+.feed_menu_div3 img {
+    width: 80px;
+}
+
+.feed_menu_div3 {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+.feed_tri_posts {
     display: flex;
     box-shadow: 0 -4px 8px #e5e5e5, 0 4px 8px #e5e5e5;
 }
 
-.feedTriPosts div {
+.feed_tri_posts div {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.feedTriPosts button {
+.feed_tri_posts button {
     color: #818181;
     background: #dfdfdf;
     border-radius: 60px;
@@ -613,37 +697,13 @@ button, textarea, input, p {
     cursor: pointer;
 }
 
-.feedTriPosts img {
+.feed_tri_posts img {
     height: 60px;
 }
 
-#feedTriPosts_pin_select {
+#feed_tri_posts_pin_select {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .feed_post_user_post_img{
 
@@ -653,22 +713,41 @@ button, textarea, input, p {
 .feed_post_user_post_img_img{
     width: 100%;
 }
-.feed_post_user_post_img_sondage_icone{
-    width: 20%;
-    display: inline-block;
-}
-.feed_post_user_post_img_sondage_text{
-    display: inline-block;
-}
-.feed_post_user_post_img_sondage{
+
+.feed_post_user_post_img_sondage_fond {
     position: absolute;
     background-color: #000;
     opacity: 0.77;
     bottom: 8%;
     right: 8%;
+    z-index: 2;
+    width: 35%;
+    padding: 1%;
+    height: 100px;
+    border-radius: 16px;
+}
+
+.feed_post_user_post_img_sondage {
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
     z-index: 3;
     width: 35%;
     padding: 1%;
+    height: 100px;
+}
+
+.feed_post_user_post_img_sondage_icone {
+    width: 20%;
+    display: inline-block;
+}
+
+.feed_post_user_post_img_sondage_text {
+    display: inline-block;
+    color: #fff;
+    transform: translateY(6px);
+    text-align: right;
+    width: 56%;
 }
 
 .feed_post_user_description, .feed_post_user{
@@ -703,7 +782,8 @@ button, textarea, input, p {
 .feed_post_user_info_2_date {
     flex : 3;
     bottom: 0;
-    padding-left :40%;    
+    padding-left : 30%;
+    text-align: right;
 }
 
 .feed_sondage_popup {

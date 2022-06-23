@@ -2,7 +2,7 @@
     <div class="post_principal">
     <!-- Header. -->
         <div class="post_menu">
-            <img id="fermerPost" src="images/icones/croix.png" />
+            <a href="?page=feed"><img id="fermerPost" src="images/icones/croix.png" /></a>
             <p id="creerPost">Dites nous en plus</p>
             <?php echo '<button id="publierPost" onclick="ajoutDescription(\'descriptionTxt\','.$_GET['id'].')" class="bouton" style="margin-left: 4vw">Publier</button>' ?>
 
@@ -14,7 +14,7 @@
                 <img id="imagePost" src="uploads/62b09eb680535.png" />
             </div>
             <div id="div_descriptionTxt">
-                <textarea id="descriptionTxt" placeholder="&#10;Veillez à bien rester anonyme" onkeyup="effacerFauxPlaceholder()"></textarea>
+                <textarea autofocus id="descriptionTxt" placeholder="&#10;Veillez à bien rester anonyme" onkeyup="effacerFauxPlaceholder()"></textarea>
                 <p id="fauxPlaceholder">Détaillez votre histoire...</p>
             </div>
         </div>

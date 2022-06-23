@@ -352,8 +352,8 @@ function colorButtons(thisButton) {
 }
 
 function colorIcone() {
-    const imgGrey = document.getElementById("feedTriPosts_pin");
-    const imgColor = document.getElementById("feedTriPosts_pin_select");
+    const imgGrey = document.getElementById("feed_tri_posts_pin");
+    const imgColor = document.getElementById("feed_tri_posts_pin_select");
 
     imgGrey.setAttribute("src", "images/icones/pin_select.png");
 }

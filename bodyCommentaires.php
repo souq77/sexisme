@@ -2,7 +2,7 @@
 
     <div id="post_commentaires_entete">
         <div class="post_commentaires_entete_perso">
-            <img id="post_commentaires_entete_perso_chevron" src="images/icones/chevron.png" />
+            <a href="?page=feed"><img id="post_commentaires_entete_perso_chevron" src="images/icones/chevron.png" /></a>
         </div>
         <div class="post_commentaires_entete_perso">
             <img id="post_commentaires_entete_perso_avatar" src="images/icones/agresseur.png" />
@@ -36,7 +36,7 @@
     <div id="post_commentaires_fixed">
         <div id="post_commentaires_fixed_message">
             <textarea id="commentValue" placeholder="Votre commentaire..."></textarea>
-            <button onclick="postCommentaire()">Envoyer</button>
+            <button class="bouton" onclick="postCommentaire()">Envoyer</button>
         </div>
         <div id="post_commentaires_fixed_menu">
             <div>
