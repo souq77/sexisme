@@ -653,13 +653,22 @@ button, textarea, input, p {
 .feed_post_user_post_img_img{
     width: 100%;
 }
-
+.feed_post_user_post_img_sondage_icone{
+    width: 20%;
+    display: inline-block;
+}
+.feed_post_user_post_img_sondage_text{
+    display: inline-block;
+}
 .feed_post_user_post_img_sondage{
     position: absolute;
     background-color: #000;
+    opacity: 0.77;
     bottom: 8%;
     right: 8%;
     z-index: 3;
+    width: 35%;
+    padding: 1%;
 }
 
 .feed_post_user_description, .feed_post_user{

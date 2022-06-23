@@ -90,8 +90,8 @@ foreach ($conn->query($sql) as $value) {?>
     </div>
     <div class="feed_post_user_post_img">
         <img class="feed_post_user_post_img_img" src="<?php echo $value['image'] ?>"/>
-        <div onclick="feedSondagePopupOpen(<?php echo $value['idPost'] ?>)" class="feed_post_user_post_img_sondage">
-            <img class="feed_post_user_post_img_sondage_icone" >
+        <div onclick="feedSondagePopupOpen(<?php echo $value['idPost'] ?>)" id="<?php echo "Sondage".$value['idPost'] ?>" class="feed_post_user_post_img_sondage">
+            <img class="feed_post_user_post_img_sondage_icone" src="images/icones/sondage.png" >
             <p class="feed_post_user_post_img_sondage_text" >Sondage >></p>
         </div>
     </div>

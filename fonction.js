@@ -280,6 +280,8 @@ function ajoutPostSuivi(idPost){
 
 function feedSondagePopupClose(idPopup) {
     const closure = document.getElementById(idPopup);
+    document.getElementById("Sondage"+idPopup).style.opacity=1;
+
     closure.style.opacity = "0";
     closure.style.transition = "1s";
     const feedSondagePopupClose = document.getElementsByClassName("feed_sondage_popup_close");
@@ -293,6 +295,7 @@ function feedSondagePopupClose(idPopup) {
 
 function feedSondagePopupOpen(idPopup) {
     const closure = document.getElementById(idPopup);
+    document.getElementById("Sondage"+idPopup).style.opacity=0;
     closure.style.opacity = "1";
     closure.style.transition = "1s";
 
@@ -319,6 +322,7 @@ function choiceSelectSurvey(idPost,choice){
                 total+=parseInt(element);
                 
             }
+            
             document.getElementById('repA'+idPost).innerHTML=  "Porter plainte "+parseInt(percentage(parseInt(reponses[0]),total))+"%";
             document.getElementById('progress_1'+idPost).value = parseInt(percentage(parseInt(reponses[0]),total));
             document.getElementById('repB'+idPost).innerHTML= "Dénoncer "+ parseInt(percentage(parseInt(reponses[1]),total))+"%";
