@@ -1,5 +1,23 @@
+<div></div>
+
+<div class="feedTriPosts">
+    <div>
+        <a href="?page=feed">
+            <button onclick="colorButtons(this)">Tous</button>
+        </a>
+    </div>
+    <div>
+        <a href="?page=feed&postSuivi=1">
+            <button onclick="colorButtons(this), colorIcone()">
+                <img id="feedTriPosts_pin" src="images/icones/pin.png" />
+                <img id="feedTriPosts_pin_select" src="images/icones/pin_select.png" />
+                Suivis
+            </button>
+        </a>
+    </div>
+</div>
+
 <a href="?page=post"><button>Creer un post</button></a>
-<a href="?page=feed&postSuivi=1"><button>Mes posts</button></a>
 
 <?php
 $sql = 'SELECT * FROM `post` ORDER BY `post`.`idPost` DESC ';

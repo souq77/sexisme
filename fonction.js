@@ -340,6 +340,20 @@ function progressChangeValue (valeur,idProgress) {
     
 }
 
+function colorButtons(thisButton) {
+    thisButton.style.background = "linear-gradient(100.37deg, #ff833e 3.2%, rgba(255, 186, 52, 0.31) 124.72%)";
+    thisButton.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.07)";
+    thisButton.style.color = "#b74b2d";
+    
+}
+
+function colorIcone() {
+    const imgGrey = document.getElementById("feedTriPosts_pin");
+    const imgColor = document.getElementById("feedTriPosts_pin_select");
+
+    imgGrey.setAttribute("src", "images/icones/pin_select.png");
+}
+
 
 
 

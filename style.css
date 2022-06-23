@@ -462,105 +462,6 @@ button, textarea, input, p {
     font-weight: bold;
 }
 
-#display_sondage {
-    margin: 2vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#display_sondage_bouton_fond {
-    display: flex;
-    justify-content: end;
-    width: 100px;
-    height: 50px;
-    border-radius: 100px;
-    background: #ff833e;
-    cursor: pointer;
-}
-
-#display_sondage_bouton_switch {
-    background: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-#sondage_preview {
-    margin: 2vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#sondage_preview_question {
-    background: #ededed;
-    padding-bottom: 4vh;
-    border-radius: 12px;
-}
-
-#sondage_preview_question p {
-    padding: 2vh 0 0 2vh;
-}
-
-#sondage_preview_reponses {
-    display: flex;
-    flex-direction: column;
-}
-
-.sondage_preview_reponse {
-    display: flex;
-    margin: 2vh 0;
-}
-
-.sondage_preview_reponse_key {
-    height: 6vh;
-    width: 6vh;
-    text-align: center;
-    background: #ff833e;
-    border-radius: 50%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 2vh;
-}
-
-.sondage_preview_reponse_key p {
-    font-size: 6rem !important;
-
-}
-
-.sondage_preview_reponse_value {
-    display: flex;
-    align-items: center;
-}
-
-.progress {
-    height: 100% !important;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-progress[value] {-webkit-appearance: none;}
-progress[value]::-webkit-progress-value {background: #ff833e;}
-
-progress::-webkit-progress-bar {background: black; width: 100%}
-progress {background-color: black}
-
-progress {
-    border-radius: 16px !important;
-}
-
-.rep_style {
-    z-index: 2;
-}
-
-
-}
-
-
 /* PAGE COMMENTAIRES. */
 #post_commentaires_entete {
     background-color: #fff;
@@ -689,6 +590,61 @@ progress {
 
 
 /* PAGE FEED. */
+.feedTriPosts {
+    display: flex;
+    box-shadow: 0 -4px 8px #e5e5e5, 0 4px 8px #e5e5e5;
+}
+
+.feedTriPosts div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedTriPosts button {
+    color: #818181;
+    background: #dfdfdf;
+    border-radius: 60px;
+    margin: 40px 0;
+    padding: 20px 60px;
+    width: 360px;
+    border: none;
+    cursor: pointer;
+}
+
+.feedTriPosts img {
+    height: 60px;
+}
+
+#feedTriPosts_pin_select {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .feed_post_user_post_img{
 
     position: relative;
@@ -791,4 +747,99 @@ progress {
 
 .feed_post {
     position: relative;
+}
+
+#display_sondage {
+    margin: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#display_sondage_bouton_fond {
+    display: flex;
+    justify-content: end;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    background: #ff833e;
+    cursor: pointer;
+}
+
+#display_sondage_bouton_switch {
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#sondage_preview {
+    margin: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#sondage_preview_question {
+    background: #ededed;
+    padding-bottom: 4vh;
+    border-radius: 12px;
+}
+
+#sondage_preview_question p {
+    padding: 2vh 0 0 2vh;
+}
+
+#sondage_preview_reponses {
+    display: flex;
+    flex-direction: column;
+}
+
+.sondage_preview_reponse {
+    display: flex;
+    margin: 2vh 0;
+}
+
+.sondage_preview_reponse_key {
+    height: 6vh;
+    width: 6vh;
+    text-align: center;
+    background: #ff833e;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vh;
+}
+
+.sondage_preview_reponse_key p {
+    font-size: 6rem !important;
+
+}
+
+.sondage_preview_reponse_value {
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    height: 100% !important;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+progress[value] {-webkit-appearance: none;}
+progress[value]::-webkit-progress-value {background: #ff833e;}
+
+progress::-webkit-progress-bar {background: black; width: 100%}
+progress {background-color: black}
+
+progress {
+    border-radius: 16px !important;
+}
+
+.rep_style {
+    z-index: 2;
 }
