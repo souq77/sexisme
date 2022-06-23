@@ -17,24 +17,32 @@
         </div>
     </div>
 
+    <?php
+        $sql = "SELECT * FROM `commentaire` WHERE idPost = ".$_GET["idPost"]." ORDER BY date DESC;";
+        foreach ($conn->query($sql) as $value) {
+            ?>
+
     <div id="post_commentaires_corps">
         <div id="post_commentaires_corps_img">
             <img src="images/icones/agresseur.png" />
         </div>
         <div id="post_commentaires_corps_txt">
             <p class="gras">nonetteandthecats</p>
-            <p>team 38 ans ici, et idem, on me essayait de me culpabiliser « c’est juste de la drague », « c’est flatteur », « tu prends tout de travers » idem j’ai jamais accepté ces comportements. A l’époque j’étais assez incomprise. J’arrivais pas à mettre des mots sur ce que je vivais même si je savais que tout ça n’était pas acceptable. Je suis heureuse de voir cette jeune génération qui a le courage de dire merde! Et stop!</p>
+            <p><?php echo $value["contenu"] ?></p>
         </div>
     </div>
-
+    <?php
+        } ?>
     <div id="post_commentaires_fixed">
         <div id="post_commentaires_fixed_message">
-            <textarea placeholder="Votre commentaire..."></textarea>
+            <textarea id="commentValue" placeholder="Votre commentaire..."></textarea>
+            <button onclick="postCommentaire()">Envoyer</button>
         </div>
         <div id="post_commentaires_fixed_menu">
             <div>
-                <div>
-                    <img src="images/icones/home.png" />
+                <div onmouseon="imgMenuMouseon" onmouseout="imgMenuMouseout()">
+                    <img id="post_commentaires_fixed_menu_home" src="images/icones/home.png" />
+                    <img id="post_commentaires_fixed_menu_home_select" src="images/icones/home_select.png" />
                 </div>
                 <div>
                     <img src="images/icones/urgence.png" />
@@ -46,4 +54,32 @@
         </div>
     </div>
 
+    <script>
+        /*function imgMenuMouseon() {
+            const postCommentairesFixedMenuHome = document.getElementById("post_commentaires_fixed_menu_home");
+            const postCommentairesFixedMenuHomeSelect = document.getElementById("post_commentaires_fixed_menu_home_select");
+
+            postCommentairesFixedMenuHome.style.display = "none";
+            postCommentairesFixedMenuHomeSelect.style.display = "block";
+        }
+
+        function imgMenuMouseout() {
+            const postCommentairesFixedMenuHome = document.getElementById("post_commentaires_fixed_menu_home");
+            const postCommentairesFixedMenuHomeSelect = document.getElementById("post_commentaires_fixed_menu_home_select");
+
+            postCommentairesFixedMenuHome.style.display = "block";
+            postCommentairesFixedMenuHomeSelect.style.display = "none";
+        }*/
+
+        /*document.addEventListener("click", () => {
+            const selectOption = document.getElementsByClassName("feed_sondage_popup_reponse");
+            selectOption.map(element => element.style.background = "#fff")
+        });*/
+
+        /*function choiceSelectSurvey() {
+            const selectOption = document.getElementsByClassName("feed_sondage_popup_reponse");
+            selectOption.foreach(element => 
+            element.style.backgound == "#000" ? element.style.backgound = "#fff" : element.style.backgound = "#000")
+        }*/
+    </script>
 </body>
