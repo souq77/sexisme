@@ -535,6 +535,28 @@ button, textarea, input, p {
     align-items: center;
 }
 
+.progress {
+    height: 100% !important;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+progress[value] {-webkit-appearance: none;}
+progress[value]::-webkit-progress-value {background: #ff833e;}
+
+progress::-webkit-progress-bar {background: black; width: 100%}
+progress {background-color: black}
+
+progress {
+    border-radius: 16px !important;
+}
+
+.rep_style {
+    z-index: 2;
+}
+
 
 
 
@@ -657,64 +679,69 @@ button, textarea, input, p {
     height: 4vh;
 }
 
+#post_commentaires_fixed_menu_home_select {
+    display: none;
+}
+
 
 
 
 
 
 /* PAGE FEED. */
-#feed_post_user_post_img{
+.feed_post_user_post_img{
 
     position: relative;
 }
 
-#feed_post_user_post_img_img{
+.feed_post_user_post_img_img{
     width: 100%;
 }
 
-#feed_post_user_post_img_sondage{
+.feed_post_user_post_img_sondage{
     position: absolute;
     background-color: #000;
     bottom: 8%;
     right: 8%;
+    z-index: 3;
 }
 
-#feed_post_user_description, #feed_post_user{
+.feed_post_user_description, .feed_post_user{
 
     padding: 5%;
 }
 
-#feed_post_user{
+.feed_post_user{
     font-family: 'Manrope', sans-serif;
     display: flex;
 }
 
-#feed_post_user_img{
+.feed_post_user_img{
     display: inline-block;
     width: 15%;
 }
 
-#feed_post_user_info_2{
+.feed_post_user_info_2{
     padding-left: 20%; 
     width: fit-content;
 }
 
-#feed_post_user_info_2_nom{
+.feed_post_user_info_2_nom{
     font-weight: bold;
 }
 
-#feed_post_user_info_1{
+.feed_post_user_info_1{
     display: inline-block;
     flex : 1;
 }
 
-#feed_post_user_info_2_date {
+.feed_post_user_info_2_date {
     flex : 3;
     bottom: 0;
     padding-left :40%;    
 }
 
-#feed_sondage_popup {
+.feed_sondage_popup {
     background: #000;
     color: #fff;
     display: flex;
@@ -724,15 +751,17 @@ button, textarea, input, p {
     transform: translateY(-50%);
     position: absolute;
     top: 50vh;
+    z-index: 2;
+    opacity: 0;
 }
 
-#feed_sondage_popup_question {
+.feed_sondage_popup_question {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2vh;
 }
 
-#feed_sondage_popup_question img {
+.feed_sondage_popup_question img {
     width: 6rem;
 }
 
@@ -743,4 +772,23 @@ button, textarea, input, p {
     align-items: center;
     border-radius: 16px;
     padding: 8px 0 4px 16px;
+    position: relative;
+}
+
+.feed_post_user_post_interaction > div {
+    display: flex;
+    justify-content: space-around;
+    background: #f8f8f8;
+    margin: 2vh 10vw;
+    padding: 24px 0;
+    border-radius: 40px;
+    position: relative;
+}
+
+.feed_post_user_post_interaction img {
+    height: 4vh;
+}
+
+.feed_post {
+    position: relative;
 }

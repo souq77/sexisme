@@ -237,11 +237,103 @@ function buttonSwitch() {
         sondagePreview.style.transition = "1s";
     }
 }
+/*
+document.getElementById("commentValue").addEventListener("keydown", event => {
+    alert(event.keyCode);
+    if (event.keyCode == 13) {
+      postCommentaire();
+    }
+});*/
 
+function postCommentaire() {
+   
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const idPost = urlParams.get('idPost');
+    const txt = document.getElementById("commentValue").value;
 
+    if (txt != "") {
+        $.ajax({
+            type: "POST",
+            url: "save_image.php?action=ajoutCommentaire&idPost="+idPost,
+            data: {
+                contenu: txt           
+            },
+            success : function(resultat, statut)
+            { 
+                location.reload();
+            },
+        });    
+    }
+}
 
+function ajoutPostSuivi(idPost){
+    $.ajax({
+        type: "POST",
+        url: "save_image.php?action=ajoutPostSuivi&idPost="+idPost,
+        success : function(resultat, statut)
+        { 
+            console.log(resultat);
+        },
+    });
+}
 
+function feedSondagePopupClose(idPopup) {
+    const closure = document.getElementById(idPopup);
+    closure.style.opacity = "0";
+    closure.style.transition = "1s";
+    const feedSondagePopupClose = document.getElementsByClassName("feed_sondage_popup_close");
+  
+    for (let i = 0; i < feedSondagePopupClose.length; i++) {
+        const element = feedSondagePopupClose[i];
+        
+        /*element.style.pointerEvents = "none";*/
+    }
+}
 
+function feedSondagePopupOpen(idPopup) {
+    const closure = document.getElementById(idPopup);
+    closure.style.opacity = "1";
+    closure.style.transition = "1s";
+
+    for (let i = 0; i < feedSondagePopupClose.length; i++) {
+        const element = feedSondagePopupClose[i];
+        
+        /*element.style.pointerEvents = "auto";*/
+    }
+}
+function percentage(partialValue, totalValue) {
+    return (100 * partialValue) / totalValue;
+ } 
+
+function choiceSelectSurvey(idPost,choice){
+    $.ajax({
+        type: "POST",
+        url: "save_image.php?action=ajoutSondage&idPost="+idPost+"&choice="+choice,
+        success : function(resultat, statut)
+        { 
+            let reponses = resultat.split('-');
+            let total = 0;
+            for (let i = 0; i < reponses.length; i++) {
+                const element = reponses[i];
+                total+=parseInt(element);
+                
+            }
+            document.getElementById('repA'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[0]),total))+"%";
+            document.getElementById('repB'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[1]),total))+"%";
+            document.getElementById('repC'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[2]),total))+"%";
+            document.getElementById('repD'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[3]),total))+"%";
+
+        },
+    });
+}
+
+function progressChangeValue (valeur) {
+    let valeurAttr = document.getElementById("progress_1").getAttribute(value);
+    let valeurText = document.getElementById("repA");
+
+    valeurAttr = valeurText;
+}
 
 
 
