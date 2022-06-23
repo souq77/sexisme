@@ -319,20 +319,25 @@ function choiceSelectSurvey(idPost,choice){
                 total+=parseInt(element);
                 
             }
-            document.getElementById('repA'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[0]),total))+"%";
-            document.getElementById('repB'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[1]),total))+"%";
-            document.getElementById('repC'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[2]),total))+"%";
-            document.getElementById('repD'+idPost).innerHTML= parseInt(percentage(parseInt(reponses[3]),total))+"%";
-
+            document.getElementById('repA'+idPost).innerHTML=  "Porter plainte "+parseInt(percentage(parseInt(reponses[0]),total))+"%";
+            document.getElementById('progress_1'+idPost).value = parseInt(percentage(parseInt(reponses[0]),total));
+            document.getElementById('repB'+idPost).innerHTML= "Dénoncer "+ parseInt(percentage(parseInt(reponses[1]),total))+"%";
+            document.getElementById('progress_2'+idPost).value = parseInt(percentage(parseInt(reponses[1]),total));
+            document.getElementById('repC'+idPost).innerHTML=  "En parler à un professionnel "+parseInt(percentage(parseInt(reponses[2]),total))+"%";
+            document.getElementById('progress_3'+idPost).value = parseInt(percentage(parseInt(reponses[2]),total));
+            document.getElementById('repD'+idPost).innerHTML=  "En parler à la personne "+parseInt(percentage(parseInt(reponses[3]),total))+"%";
+            document.getElementById('progress_4'+idPost).value = parseInt(percentage(parseInt(reponses[3]),total));
+            document.getElementById('repE'+idPost).innerHTML=  "En parler à ses proches "+parseInt(percentage(parseInt(reponses[4]),total))+"%";
+            document.getElementById('progress_5'+idPost).value = parseInt(percentage(parseInt(reponses[4]),total));
+            document.getElementById('repF'+idPost).innerHTML=  "Ne pas tenir compte "+parseInt(percentage(parseInt(reponses[5]),total))+"%";
+            document.getElementById('progress_6'+idPost).value = parseInt(percentage(parseInt(reponses[5]),total));
         },
     });
 }
 
-function progressChangeValue (valeur) {
-    let valeurAttr = document.getElementById("progress_1").getAttribute(value);
-    let valeurText = document.getElementById("repA");
-
-    valeurAttr = valeurText;
+function progressChangeValue (valeur,idProgress) {
+    let valeurAttr = document.getElementById(idProgress).getAttribute(value);
+    
 }
 
 

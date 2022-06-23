@@ -750,7 +750,7 @@ progress {
     padding: 4vh 16%;
     transform: translateY(-50%);
     position: absolute;
-    top: 50vh;
+    top: 44vh;
     z-index: 2;
     opacity: 0;
 }

@@ -24,20 +24,28 @@ foreach ($conn->query($sql) as $value) {?>
             </div>
         </div>
         <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey(<?php echo $value['idPost'] ?>, 1)">
-        <progress id="progress_1" class="progress" max="100" value="75" onclick="progressChangeValue(this)"></progress>
-        <?php echo '<p id="repA'.$value["idPost"].'" class="rep_style">A. Texte</p>'; ?>
+        <?php echo '<progress id="progress_1'.$value["idPost"].'" class="progress" max="100" value="0" onclick="progressChangeValue(this,"progress_1'.$value["idPost"].'")"></progress>'; ?>        
+        <?php echo '<p id="repA'.$value["idPost"].'" class="rep_style">Porter plainte</p>'; ?>
         </div>
         <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey(<?php echo $value['idPost'] ?>, 2)">
-        <?php echo '<p id="repB'.$value["idPost"].'" class="rep_style">B. Texte</p>'; ?>
-
+        <?php echo '<progress id="progress_2'.$value["idPost"].'" class="progress" max="100" value="0" onclick="progressChangeValue(this,"progress_2'.$value["idPost"].'")"></progress>'; ?>        
+        <?php echo '<p id="repB'.$value["idPost"].'" class="rep_style">Dénoncer</p>'; ?>
         </div>
         <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey(<?php echo $value['idPost'] ?> ,3)">
-        <?php echo '<p id="repC'.$value["idPost"].'" class="rep_style">C. Texte</p>'; ?>
-
+        <?php echo '<progress id="progress_3'.$value["idPost"].'" class="progress" max="100" value="0" onclick="progressChangeValue(this,"progress_3'.$value["idPost"].'")"></progress>'; ?>        
+        <?php echo '<p id="repC'.$value["idPost"].'" class="rep_style">En parler à un professionnel</p>'; ?>
         </div>
         <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey(<?php echo $value['idPost'] ?>, 4)">
-        <?php echo '<p id="repD'.$value["idPost"].'" class="rep_style">D. Texte</p>'; ?>
-
+        <?php echo '<progress id="progress_4'.$value["idPost"].'" class="progress" max="100" value="0" onclick="progressChangeValue(this,"progress_4'.$value["idPost"].'")"></progress>'; ?>        
+        <?php echo '<p id="repD'.$value["idPost"].'" class="rep_style">En parler à la personne </p>'; ?>
+        </div>
+        <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey(<?php echo $value['idPost'] ?>, 5)">
+        <?php echo '<progress id="progress_5'.$value["idPost"].'" class="progress" max="100" value="0" onclick="progressChangeValue(this,"progress_5'.$value["idPost"].'")"></progress>'; ?>        
+        <?php echo '<p id="repE'.$value["idPost"].'" class="rep_style">En parler à ses proches</p>'; ?>
+        </div>
+        <div class="feed_sondage_popup_reponse" onclick="choiceSelectSurvey(<?php echo $value['idPost'] ?>, 6)">
+        <?php echo '<progress id="progress_6'.$value["idPost"].'" class="progress" max="100" value="0" onclick="progressChangeValue(this,"progress_6'.$value["idPost"].'")"></progress>'; ?>        
+        <?php echo '<p id="repF'.$value["idPost"].'" class="rep_style">Ne pas tenir compte</p>'; ?>
         </div>
     </div>
 

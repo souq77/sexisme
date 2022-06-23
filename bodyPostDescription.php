@@ -45,7 +45,7 @@
                         <p>A</p>
                     </div>
                     <div class="sondage_preview_reponse_value">
-                        <p>Texte</p>
+                        <p>Porter plainte</p>
                     </div>
                 </div>
                 <div class="sondage_preview_reponse">
@@ -53,7 +53,7 @@
                         <p>B</p>
                     </div>
                     <div class="sondage_preview_reponse_value">
-                        <p>Texte</p>
+                        <p>Dénoncer</p>
                     </div>
                 </div>
                 <div class="sondage_preview_reponse">
@@ -61,7 +61,7 @@
                         <p>C</p>
                     </div>
                     <div class="sondage_preview_reponse_value">
-                        <p>Texte</p>
+                        <p>En parler à un professionnel</p>
                     </div>
                 </div>
                 <div class="sondage_preview_reponse">
@@ -69,7 +69,23 @@
                         <p>D</p>
                     </div>
                     <div class="sondage_preview_reponse_value">
-                        <p>Texte</p>
+                        <p>En parler à la personne</p>
+                    </div>
+                </div>
+                <div class="sondage_preview_reponse">
+                    <div class="sondage_preview_reponse_key">
+                        <p>E</p>
+                    </div>
+                    <div class="sondage_preview_reponse_value">
+                        <p>En parler à ses proches</p>
+                    </div>
+                </div>
+                <div class="sondage_preview_reponse">
+                    <div class="sondage_preview_reponse_key">
+                        <p>F</p>
+                    </div>
+                    <div class="sondage_preview_reponse_value">
+                        <p>Ne pas tenir compte </p>
                     </div>
                 </div>
             </div>

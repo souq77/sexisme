@@ -51,11 +51,16 @@ if (isset($_GET['action'])) {
             $rep2=0;
             $rep3=0;
             $rep4=0;
+            $rep5=0;
+            $rep6=0;
             foreach ($conn->query($sql) as $value) {
                 $rep1 = $value['rep1'];
                 $rep2 = $value['rep2'];
                 $rep3 = $value['rep3'];
                 $rep4 = $value['rep4'];
+                $rep5 = $value['rep5'];
+                $rep6 = $value['rep6'];
+                
             }
             switch ($_GET['choice']) {
                 case 1:
@@ -73,14 +78,22 @@ if (isset($_GET['action'])) {
                     $rep4++;
 
                     break;
+                case 5:
+                    $rep5++;
 
+                    break;
+                case 6:
+                    $rep6++;
+
+                    break;
+                
             }
-            $sql = "UPDATE `sondage` SET`rep1`='$rep1',`rep2`='$rep2',`rep3`='$rep3',`rep4`='$rep4' WHERE  `idPost`='$idPost'";
+            $sql = "UPDATE `sondage` SET`rep1`='$rep1',`rep2`='$rep2',`rep3`='$rep3',`rep4`='$rep4',`rep5`='$rep5',`rep6`='$rep6' WHERE  `idPost`='$idPost'";
             $conn->query($sql);
-            echo $rep1.'-'.$rep2.'-'.$rep3.'-'.$rep4;
+            echo $rep1.'-'.$rep2.'-'.$rep3.'-'.$rep4.'-'.$rep5.'-'.$rep6;
             break;   
         case 'getImage':
-            $idImage = $_GET['idImage'];
+            $idImage = $_GET['idImage']; 
             $sql = "SELECT * FROM `post` WHERE idPost=" . $idImage;
             foreach($conn->query($sql) as $value) {
                 echo $value["image"];
