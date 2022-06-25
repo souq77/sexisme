@@ -569,6 +569,17 @@ body {
     border: 1px solid #fff;
 }
 
+#create_pics {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: -80px;
+    color: #ff833e;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px #fff, 0px 1px 1px #fff, 1px 0px 1px #fff, 1px 1px 1px #fff;
+    opacity: hidden;
+}
+
 #post_commentaires_fixed_message {
     display: flex;
     justify-content: center;
@@ -691,7 +702,7 @@ h1 {
     background: #dfdfdf;
     border-radius: 60px;
     margin: 40px 0;
-    padding: 20px 60px;
+    padding: 20px 50px;
     width: 360px;
     border: none;
     cursor: pointer;

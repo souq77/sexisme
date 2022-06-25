@@ -358,6 +358,16 @@ function colorIcone() {
     imgGrey.setAttribute("src", "images/icones/pin_select.png");
 }
 
+function displayTitle() {
+    let title = document.getElementById("create_pics");
+    title.style.opacity = "1";
+}
+
+function hideTitle() {
+    let title = document.getElementById("create_pics");
+    title.style.opacity = "0";
+}
+
 
 
 

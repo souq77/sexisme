@@ -19,7 +19,7 @@
 <div class="feed_tri_posts">
     <div>
         <a href="?page=feed">
-            <button onclick="colorButtons(this)">Tous</button>
+            <button onclick="colorButtons(this)">Tous les spics</button>
         </a>
     </div>
     <div>
@@ -129,7 +129,8 @@ foreach ($conn->query($sql) as $value) {?>
 <div id="post_commentaires_fixed">
     <a id="bouton_create_post" href="?page=post">
         <div id="create_post">
-            <img src="images/icones/create_post.png" />
+            <p id="create_pics">Créer un spics</p>
+            <img src="images/icones/create_post.png" onmouseover="displayTitle()" onmouseout="hideTitle()" />
         </div>
     </a>
 
